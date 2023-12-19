@@ -1,0 +1,11 @@
+-- compile to risvc
+riscv64-unknown-elf-gcc -o hello hello.c
+riscv64-unknown-elf-gcc -o count count.c
+riscv64-unknown-elf-gcc -o matmulti matmulti.c
+-- execute using spike
+spike pk hello
+spike pk count
+spike pk matmulti
+-- transfer to milkv duo to run on actual riscv cpu
+scp -O ./count root@192.168.1.xx:/root
+
