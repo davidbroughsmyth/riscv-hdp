@@ -8,6 +8,6 @@ On a MacOS with a apple M2 cpu I have used  https://github.com/riscv-software-sr
 Since I have a https://milkv.io/duo, the programs are tested on actual hardware  
 
 Using https://godbolt.org/ to show RISC-V assemble and execution
-Hello: https://godbolt.org/z/zore9ffKW
-Count: https://godbolt.org/z/efvE7njTv
-MatMuli: https://godbolt.org/z/9rfE4d1eW
+. Hello: https://godbolt.org/z/zore9ffKW
+. Count: https://godbolt.org/z/efvE7njTv
+. MatMuli: https://godbolt.org/z/9rfE4d1eW
