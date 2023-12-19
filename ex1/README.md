@@ -6,3 +6,8 @@ Using **spike** as a RISC-V ISA simulator  https://github.com/riscv-software-src
 On a MacOS with a apple M2 cpu I have used  https://github.com/riscv-software-src/homebrew-riscv to set up the RISC-V toolchain
 
 Since I have a https://milkv.io/duo, the programs are tested on actual hardware  
+
+Using https://godbolt.org/ to show RISC-V assemble and execution
+Hello: https://godbolt.org/z/zore9ffKW
+Count: https://godbolt.org/z/efvE7njTv
+MatMuli: https://godbolt.org/z/9rfE4d1eW
