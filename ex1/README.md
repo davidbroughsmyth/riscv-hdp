@@ -1,4 +1,4 @@
-### C code for counter and matrix multiplication
+### C code for counter and matrix multiplication. And comparing it to the rvbook
 **shcmds** show comandline to complie and execute each program
 
 Using **spike** as a RISC-V ISA simulator  https://github.com/riscv-software-src/riscv-isa-sim
@@ -17,7 +17,7 @@ Using https://godbolt.org/ to show RISC-V assemble and execution:
 
 Showing the assembly code differences between a very basic C hello program and the C hello program from the rvbook for RISC-V gcc, x86-64 gcc and the riscv64-unknown-elf-gcc toolchain.
 
-#### Hello
+#### Godbolt Hello
 ![image](../images/count.png)
 
 ##### From the risc-v gcc toolchain
@@ -54,7 +54,7 @@ main:
 	.ident	"GCC: (gc891d8dc2-dirty) 13.2.0"
 ```
 
-#### Hello_rvbook
+#### Godbolt Hello_rvbook
 ![image](../images/count_rvbook.png)
 
 ##### From the risc-v gcc toolchain
@@ -95,3 +95,5 @@ main:
 	.size	main, .-main
 	.ident	"GCC: (gc891d8dc2-dirty) 13.2.0"
 ```
+
+##### From the rvbook
