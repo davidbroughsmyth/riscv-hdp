@@ -1,3 +1,5 @@
+`default_nettype none
+`timescale 1ns/1ns
 module alu(
     input [3:0] a, b,
     input [2:0] operation,
@@ -19,4 +21,3 @@ always @(*) begin
 end
 
 endmodule
-
