@@ -15,7 +15,7 @@ Using https://godbolt.org/ to show RISC-V assemble and execution:
 
 ### Assembly differences
 
-Showing the assembly code differences between a very basic C hello program and the C hello program from the rvbook for RISC-V gcc, x86-64 gcc and the riscv64-unknown-elf-gcc toolchain.
+Showing the assembly code differences between a very basic C hello program and the C hello program from the rvbook. Assemby for godbolt RISC-V gcc, godbolt x86-64 gcc and the riscv64-unknown-elf-gcc toolchain.
 
 #### Godbolt Hello
 ![image](../images/count.png)
