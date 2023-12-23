@@ -20,5 +20,9 @@ Showing the assembly code differences between a very basic C hello program and t
 #### Hello
 ![image](../images/count.png)
 
+``` assembly
+./hello.s
+```
+
 #### Hello_rvbook
 ![image](../images/count_rvbook.png)
