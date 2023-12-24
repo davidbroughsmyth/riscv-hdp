@@ -12,6 +12,7 @@ spike pk alu
 
 ### Verilog 4bit ALU
 -- compiler verilog with test bench
+
 Note that the alu_tb.v test bench sets up the test operations and define the .vcd file for gtkwave
 ```
 iverilog -o alu_v alu_tb.v alu.v
