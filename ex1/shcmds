@@ -7,7 +7,7 @@ riscv64-unknown-elf-gcc -o matmulti matmulti.c
 spike pk hello
 spike pk count
 spike pk matmulti
--- compile to assemble
+-- compile to assembly format
 riscv64-unknown-elf-gcc -S hello.c
 riscv64-unknown-elf-gcc -S hello_rvbook.c
 -- transfer to milkv duo to run on actual riscv cpu
