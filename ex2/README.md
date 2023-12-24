@@ -1,4 +1,4 @@
-### Calculate 10-19 base 10 using signed and 1s and 2s complement binary arithmetic
+### Calculate 10-19 base 10 using 2s complement binary arithmetic
 
 ```
 10-19 = -9
@@ -50,7 +50,7 @@
 50 = 00110010
 ```
 
-### Calculate 36-12 base 10 using signed and 1s and 2s complement binary arithmetic
+### Calculate 36-12 base 10 using 2s complement binary arithmetic
 
 ```
 36-12 = 24
