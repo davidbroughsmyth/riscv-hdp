@@ -4,7 +4,7 @@ int main() {
     int a, b, result = 0;
     char operation;
 
-    printf("Enter two 4-bit binary numbers (A and B): ");
+    printf("Enter two 4-bit binary numbers as decimal (A and B): ");
     scanf("%d %d", &a, &b);
 
     printf("Enter the operation (+, -, *, /, &, |, ^): ");
