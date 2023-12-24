@@ -30,6 +30,7 @@
 ```
 10-19 = 10 + (-19) = 10 + 1s complement of 19 + 1 = 10 + 11101100 + 1 = 10 + 11101101 = 11110111
 ```
+
 ### Calculate 20+30 base 10 using binary arithmetic
 
 ```
@@ -48,6 +49,27 @@
 ```
 50 = 00110010
 ```
+
+### Calculate 36-12 base 10 using signed and 1s and 2s complement binary arithmetic
+
+```
+36-12 = 24
+```
+
+```
+36 = 00100100
+12 = 00001100
+```
+
+```
+1s complement of 12 = 11110011
+2s complement of 12 = 11110100
+```
+
+```
+36 + (-12) = 00100100 + 11110100 = 00011000
+```
+
 ### C based 4bit ALU
 
 Using godbolt to show compilation and execution: https://godbolt.org/z/a9dv6Mrnf
