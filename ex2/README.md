@@ -32,6 +32,8 @@
 ```
 
 ### C based 4bit ALU
+
+Using godbolt: https://godbolt.org/z/a9dv6Mrnf
 -- compile to risc-v
 ```
 riscv64-unknown-elf-gcc -o alu alu.c
