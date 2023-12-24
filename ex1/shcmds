@@ -1,4 +1,4 @@
--- compile to risvc
+-- compile to risc-v
 riscv64-unknown-elf-gcc -o hello hello.c
 riscv64-unknown-elf-gcc -o hello_rvbook hello_rvbook.c
 riscv64-unknown-elf-gcc -o count count.c
