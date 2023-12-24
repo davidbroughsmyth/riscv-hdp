@@ -1,4 +1,4 @@
-### Calculate - 10-19 base 10 using signed and using 1s and 2s complement.
+### Calculate 10-19 base 10 using signed and 1s and 2s complement binary arithmetic
 
 ```
 10-19 = -9
@@ -30,7 +30,24 @@
 ```
 10-19 = 10 + (-19) = 10 + 1s complement of 19 + 1 = 10 + 11101100 + 1 = 10 + 11101101 = 11110111
 ```
+### Calculate 20+30 base 10 using binary arithmetic
 
+```
+20+30 = 50
+```
+
+```
+20 = 00010100
+30 = 00011110
+```
+
+```
+20 + 30 = 00010100 + 00011110 =  00110010
+```
+
+```
+50 = 00110010
+```
 ### C based 4bit ALU
 
 Using godbolt to show compilation and execution: https://godbolt.org/z/a9dv6Mrnf
