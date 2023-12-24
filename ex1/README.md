@@ -6,20 +6,23 @@ Using **spike** as a RISC-V ISA simulator  https://github.com/riscv-software-src
 On a MacOS with a apple M2 cpu I have used  https://github.com/riscv-software-src/homebrew-riscv to set up the RISC-V toolchain which includes Spike
 
 -- compile to risc-v
-`riscv64-unknown-elf-gcc -o hello hello.c
+```
+riscv64-unknown-elf-gcc -o hello hello.c
 riscv64-unknown-elf-gcc -o hello_rvbook hello_rvbook.c
 riscv64-unknown-elf-gcc -o count count.c
 riscv64-unknown-elf-gcc -o matmulti matmulti.c
-`
+```
 -- compile to assembly format
-`riscv64-unknown-elf-gcc -S hello.c
+```
+riscv64-unknown-elf-gcc -S hello.c
 riscv64-unknown-elf-gcc -S hello_rvbook.c
-`
+```
 -- execute using spike
-`spike pk hello
+```
+spike pk hello
 spike pk count
 spike pk matmulti
-`
+```
 Since I have a https://milkv.io/duo, the programs are tested on actual hardware  
 
 Using https://godbolt.org/ to show RISC-V assemble and execution:
