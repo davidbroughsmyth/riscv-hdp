@@ -21,6 +21,12 @@ vvp alu_v
 ```
 ![image](../images/alu_verilog_run.png)
 
+-- display gtkwave for ALU
+```
+gtkwave.vcd
+```
+![image](../images/gtkwave_alu.png)
+
 -- RTL systhesis showing fpga gates
 ```
 yosys -p "read_verilog alu.v; proc; opt; show -colors 2 -width -signed"
