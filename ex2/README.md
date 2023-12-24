@@ -1,4 +1,4 @@
-### Calculate - 10-19 base 10 using signed and using 1s and 2complement.
+### Calculate - 10-19 base 10 using signed and using 1s and 2s complement.
 
 ```
 10-19 = -9
