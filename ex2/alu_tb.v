@@ -20,10 +20,28 @@ module alu_tb;
         operation = 3'b000; // Addition
         #10;
 
-        // Add more test cases as needed
+        a = 4'b0101;
+        b = 4'b0011;
+        operation = 3'b001; // Subtract
+        #10;
+
+        a = 4'b0101;
+        b = 4'b0011;
+        operation = 3'b010; // And
+        #10;
+	
+        a = 4'b0101;
+        b = 4'b0011;
+        operation = 3'b011; // OR
+        #10;
+
+        a = 4'b0101;
+        b = 4'b0011;
+        operation = 3'b100; // XOR
+        #10;
     end
     
     initial
-        $monitor("A:%0d  B:%0d Result:%0d",a,b,result);
+        $monitor("A:%0d  Op:%0d B:%0d Result:%0d",a,operation,b,result);
 endmodule
 
