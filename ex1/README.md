@@ -1,5 +1,5 @@
 ### C code for counter and matrix multiplication. And comparing hello program from the rvbook
-**shcmds** show comandline to complie and execute each program using the risc-v toolchain compiler
+**shcmds** show the comands to complie and execute each program using the risc-v toolchain compiler
 
 Using **spike** as a RISC-V ISA simulator  https://github.com/riscv-software-src/riscv-isa-sim
 
