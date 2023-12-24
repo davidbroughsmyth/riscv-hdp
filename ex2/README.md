@@ -19,7 +19,10 @@ iverilog -o alu_v alu_tb.v alu.v
 ```
 vvp alu_v
 ```
+![image](../images/alu_verilog_run.png)
+
 -- RTL systhesis showing fpga gates
 ```
 yosys -p "read_verilog alu.v; proc; opt; show -colors 2 -width -signed"
 ```
+![image](../images/alu_synth.png)
