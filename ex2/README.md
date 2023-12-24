@@ -1,5 +1,4 @@
-### 4 bit ALU
-== C based 4bit ALU
+### C based 4bit ALU
 -- compile to risc-v
 ```
 riscv64-unknown-elf-gcc -o alu alu.c
@@ -8,7 +7,7 @@ riscv64-unknown-elf-gcc -o alu alu.c
 ```
 spike pk alu
 ```
-== Verilog 4bit ALU
+### Verilog 4bit ALU
 -- compiler verilog
 ```
 iverilog -o alu_v alu_tb.v alu.v
