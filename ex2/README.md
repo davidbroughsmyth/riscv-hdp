@@ -6,7 +6,7 @@ riscv64-unknown-elf-gcc -o alu alu.c
 -- execute using spike
 ```
 spike pk alu
-``
+```
 -- command line C program run
 ```
 bbl loader
