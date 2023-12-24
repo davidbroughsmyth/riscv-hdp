@@ -6,7 +6,14 @@ riscv64-unknown-elf-gcc -o alu alu.c
 -- execute using spike
 ```
 spike pk alu
+``
+-- command line program run`
 ```
+bbl loader
+Enter two 4-bit binary numbers as decimal (A and B): 3 4
+Enter the operation (+, -, *, /, &, |, ^): |
+Result: 7
+``
 ### Verilog 4bit ALU
 -- compiler verilog
 ```
