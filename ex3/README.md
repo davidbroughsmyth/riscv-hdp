@@ -1,4 +1,4 @@
-### 32bit RISC-V compilation
+### C code RISC-V verification
 
 -- compile to 64bit risc-v
 ```
@@ -6,6 +6,8 @@ riscv64-unknown-elf-gcc -o count count.c
 riscv64-unknown-elf-gcc -o matmulti matmulti.c
 riscv64-unknown-elf-gcc -o alu alu.c
 ```
+### 32bit RISC-V compilation
+
 -- compile to 32bit risc-v without #includes,libraries and printf
 ```
 riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o count32_noprintf count32_noprintf.c
@@ -28,3 +30,5 @@ riscv64-unknown-elf-objdump -d -r alu32_noprintf > alu32_noprintf.txt
 
 -- execute alu using spike
 ![image](../images/alu_spike.png)
+
+### compare
