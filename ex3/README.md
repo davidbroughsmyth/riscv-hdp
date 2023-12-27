@@ -116,7 +116,7 @@ If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no l
 
 On the second pass the 4 inital instructions of main are skipped, so only 10 .L4 loop instructions are run until the count gets to 16  plus the 8 display instructions. The **.L4 loop** + **display** = 1.8 microseconds and 1.7 microseconds when the count gets to 16. 
 
-Hence we expect the whole count sequence to 16 to equal (the loop count sequence will display 0 to 15):
+Hence we expect the whole count sequence to 16 to equal (the loop count sequence will only display 0 to 15):
 ```
 first pass + 14 * second pass + last pass
  = 23 inst + 14 * 18 + 17
