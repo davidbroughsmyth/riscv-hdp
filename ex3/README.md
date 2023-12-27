@@ -38,4 +38,13 @@ riscv64-unknown-elf-objdump -d -r alu32_noprintf > alu32_noprintf.txt
 -- execute alu using spike
 ![image](../images/alu_spike.png)
 
-### compare
+### comparing 64bit to 32bit sizes, and 32bit without libs
+
+-- count
+![image](../images/count_size.png)
+
+-- matmulti
+![image](../images/matmulti_size.png)
+
+-- alu
+![image](../images/alu_size.png)
