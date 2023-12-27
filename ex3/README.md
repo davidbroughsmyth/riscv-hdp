@@ -19,3 +19,12 @@ riscv64-unknown-elf-objdump -d -r count32_noprintf > count32_noprintf.txt
 riscv64-unknown-elf-objdump -d -r matmulti32_noprintf > matmulti32_noprintf.txt
 riscv64-unknown-elf-objdump -d -r alu32_noprintf > alu32_noprintf.txt
 ```
+
+-- execute count using spike
+![image](../images/count_spike.png)
+
+-- execute matmulti using spike
+![image](../images/matmulti_spike.png)
+
+-- execute alu using spike
+![image](../images/alu_spike.png)
