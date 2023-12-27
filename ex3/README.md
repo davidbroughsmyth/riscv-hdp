@@ -8,6 +8,13 @@ riscv64-unknown-elf-gcc -o alu alu.c
 ```
 ### 32bit RISC-V compilation
 
+-- compile to 32bit risc-v with libs
+```
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o count32 count.c
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o matmulti32 matmulti.c
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o alu32 alu.c
+```
+
 -- compile to 32bit risc-v without #includes,libraries and printf
 ```
 riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o count32_noprintf count32_noprintf.c
