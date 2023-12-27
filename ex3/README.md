@@ -53,7 +53,7 @@ The same c code for 32bit compliles down to double the size to that of 64bit. Wh
 
 ### RISCV-C CPU Performance
 
--- count32 lib strip assembly
+-- count32 lib stripped assembly
 ```
 riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -S count32_noprintf.c
 ```
@@ -101,3 +101,13 @@ main:
         .size   main, .-main
         .ident  "GCC: (gc891d8dc2-dirty) 13.2.0"
 ``` 
+
+Display = 8 instructions
+Loop .L4 = 10 instuctions
+Main = 5 instructions
+
+One pass of the count loop = 4 (main) + 10 (loop) + 5 (display) = 19 instructions
+
+RISC-V CPU do one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 19 clock cycles
+
+If the CPU was 10Mhz then one count loop would take 1.9 microseconds
