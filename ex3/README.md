@@ -108,6 +108,6 @@ Main = 5 instructions
 
 One pass of the count loop = 4 (main) + 10 (loop) + 5 (display) = 19 instructions
 
-RISC-V CPU do one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 19 clock cycles
+RISC-V CPU's do one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 19 clock cycles
 
 If the CPU was 10Mhz then one count loop would take 1.9 microseconds
