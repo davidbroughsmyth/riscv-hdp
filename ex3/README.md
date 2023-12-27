@@ -38,7 +38,9 @@ riscv64-unknown-elf-objdump -d -r alu32_noprintf > alu32_noprintf.txt
 -- execute alu using spike
 ![image](../images/alu_spike.png)
 
-### comparing 64bit to 32bit sizes, and 32bit without libs
+### Comparing 64bit to 32bit sizes, and 32bit without libs
+
+The same c code for 32bit compliles down to double the size to that of 64bit. Whilst a 32bit lib stripped c code is about 7% of 32bit compliled executable.  
 
 -- count
 ![image](../images/count_size.png)
