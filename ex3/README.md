@@ -114,4 +114,13 @@ RISC-V CPU's do one instruction per clock cycle, hence one pass of `count32_nopr
 
 If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no libraries were called, but since display is non functional the count program could be optimised by removing 8 (display) cpu cycles and 1 cpu cycle from the call to display from .L4, this would make the optimised count program taking 13 cpu cycles or 1.4 microseconds.
 
-On the second pass the 4 inital instructions of main are skipped, so only 10 .L4 loop instructions are run until the count gets to zero plus the 8 display instructions. The **.L4 loop** + **display** = 1.8 microseconds and 1.7 microseconds when the count gets to zero. 
+On the second pass the 4 inital instructions of main are skipped, so only 10 .L4 loop instructions are run until the count gets to 16  plus the 8 display instructions. The **.L4 loop** + **display** = 1.8 microseconds and 1.7 microseconds when the count gets to 16. 
+
+Hence we expect the whole count sequence to 16 to equal (the loop count sequence will display 0 to 15):
+```
+first pass + 14 * second pass + last pass
+ = 23 inst + 14 * 18 + 17
+ = 292 cpu cycles
+ = 292 microseconds
+```
+
