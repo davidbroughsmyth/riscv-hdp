@@ -23,7 +23,7 @@ spike pk hello
 spike pk count
 spike pk matmulti
 ```
-Since I have a https://milkv.io/duo, the programs are also tested on actual hardware  
+Since I have a https://milkv.io/duo, the programs are also tested on actual risc-v hardware  
 
 Using https://godbolt.org/ to show RISC-V assemble and execution:
 1. Hello: https://godbolt.org/z/zore9ffKW
