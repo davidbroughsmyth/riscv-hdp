@@ -102,9 +102,11 @@ main:
         .ident  "GCC: (gc891d8dc2-dirty) 13.2.0"
 ``` 
 
-Display = 8 instructions
-Loop .L4 = 10 instuctions
-Main = 5 instructions
+**Display** = 8 instructions
+
+**Loop .L4** = 10 instuctions
+
+**Main** = 5 instructions
 
 One pass of the count loop = 4 (main) + 10 (loop) + 5 (display) = 19 instructions
 
