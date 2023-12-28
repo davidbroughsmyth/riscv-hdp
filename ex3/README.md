@@ -143,7 +143,7 @@ The CPI numbers for the individual instructions can be found in the table below.
 | indirect jump (jalr) |    6 |
 | shift operations     | 4-14 |
 
-Give the same program and same CPU clock of 10Mhz, then the whole count sequence to 16 to equal:
+Give the same count program and same CPU clock of 10Mhz, then the whole count sequence to 16 to equal:
 ```
 CPU time = 4 (CPI) * 292 instuctions * 0.1uS (10Mhz clock)
  = 116.8 microsconds
