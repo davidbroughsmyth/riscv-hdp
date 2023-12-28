@@ -120,27 +120,31 @@ Hence we expect the whole count sequence to 16 to equal (the loop count sequence
 ```
 first pass + 14 * second pass + last pass
  = 23 inst + 14 * 18 + 17
- = 292 cpu cycles
- = 292 microseconds
+ = 292 cpu cycles (or instuctions for CPI=1)
+
+CPU time = 1 (CPI) * 292 * 0.1uS (10mhz clock)
+ = 29.2 microseconds
 ```
 
 #### Selecting a PicoRV32 cpu
 
-The average Cycles per Instruction (CPI) for a [PicoRV32] (https://github.com/YosysHQ/picorv32) is approximately 4, depending on the mix of
-instructions in the code. The CPI numbers for the individual instructions can
-be found in the table below. The column "CPI (SP)" contains the CPI numbers for
-a core built without ENABLE_REGS_DUALPORT.
+The average Cycles per Instruction (CPI) for a [PicoRV32](https://github.com/YosysHQ/picorv32) is approximately 4, depending on the mix of instructions in the code. 
+The CPI numbers for the individual instructions can be found in the table below. 
 
-| Instruction          |  CPI | CPI (SP) |
-| ---------------------| ----:| --------:|
-| direct jump (jal)    |    3 |        3 |
-| ALU reg + immediate  |    3 |        3 |
-| ALU reg + reg        |    3 |        4 |
-| branch (not taken)   |    3 |        4 |
-| memory load          |    5 |        5 |
-| memory store         |    5 |        6 |
-| branch (taken)       |    5 |        6 |
-| indirect jump (jalr) |    6 |        6 |
-| shift operations     | 4-14 |     4-15 |
+| Instruction          |  CPI |
+| ---------------------| ----:|
+| direct jump (jal)    |    3 |
+| ALU reg + immediate  |    3 |
+| ALU reg + reg        |    3 |
+| branch (not taken)   |    3 |
+| memory load          |    5 |
+| memory store         |    5 |
+| branch (taken)       |    5 |
+| indirect jump (jalr) |    6 |
+| shift operations     | 4-14 |
 
-
+Give the same program and same CPU clock of 10Mhz, then the whole count sequence to 16 to equal:
+```
+CPU time = 4 (CPI) * 292 instuctions * 0.1uS (10Mhz clock)
+ = 116.8 microsconds
+```
