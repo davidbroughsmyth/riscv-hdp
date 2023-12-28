@@ -110,7 +110,7 @@ main:
 
 First pass of the count loop = 5 (inital main) + 10 (loop) + 8 (display) = 23 instructions
 
-RISC-V CPU's do one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 23 clock cycles
+If the selected RISC-V CPU's does one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 23 clock cycles
 
 If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no libraries were called, but since display is non functional the count program could be optimised by removing 8 (display) cpu cycles and 1 cpu cycle from the call to display from .L4, this would make the optimised count program taking 13 cpu cycles or 1.4 microseconds.
 
