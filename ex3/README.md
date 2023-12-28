@@ -110,7 +110,7 @@ main:
 
 First pass of the count loop = 5 (inital main) + 10 (loop) + 8 (display) = 23 instructions
 
-If the selected RISC-V CPU's does one instruction per clock cycle, hence one pass of `count32_noprintf.c` = 23 clock cycles
+If the selected RISC-V CPU's does one instruction per clock cycle, hence Cycles per Instruction (CPI) = 1, then one pass of `count32_noprintf.c` = 23 clock cycles
 
 If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no libraries were called, but since display is non functional the count program could be optimised by removing 8 (display) cpu cycles and 1 cpu cycle from the call to display from .L4, this would make the optimised count program taking 13 cpu cycles or 1.4 microseconds.
 
@@ -123,4 +123,24 @@ first pass + 14 * second pass + last pass
  = 292 cpu cycles
  = 292 microseconds
 ```
+
+#### Selecting a PicoRV32 cpu
+
+The average Cycles per Instruction (CPI) for a [PicoRV32] (https://github.com/YosysHQ/picorv32) is approximately 4, depending on the mix of
+instructions in the code. The CPI numbers for the individual instructions can
+be found in the table below. The column "CPI (SP)" contains the CPI numbers for
+a core built without ENABLE_REGS_DUALPORT.
+
+| Instruction          |  CPI | CPI (SP) |
+| ---------------------| ----:| --------:|
+| direct jump (jal)    |    3 |        3 |
+| ALU reg + immediate  |    3 |        3 |
+| ALU reg + reg        |    3 |        4 |
+| branch (not taken)   |    3 |        4 |
+| memory load          |    5 |        5 |
+| memory store         |    5 |        6 |
+| branch (taken)       |    5 |        6 |
+| indirect jump (jalr) |    6 |        6 |
+| shift operations     | 4-14 |     4-15 |
+
 
