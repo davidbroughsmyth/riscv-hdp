@@ -158,7 +158,7 @@ CPI performance ratio of the reference IdealRV to PicoRV32 CPU's
 *IdealRV is 4 times faster*
 
 If the PicoRV32 CPU clock runs at 100Mhz instead
-'''
+```
 CPU performance ratio of the reference IdealRV to PicoRV32 CPU's
  = 4 (CPI PicoRV32) * 0.01uS/ 1 (CPI IdealRV) * 0.1uS
  = 0.4
