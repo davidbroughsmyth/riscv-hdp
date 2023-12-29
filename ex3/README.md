@@ -112,7 +112,7 @@ First pass of the count loop = 5 (inital main) + 10 (loop) + 8 (display) = 23 in
 
 If the selected RISC-V CPU does one instruction per clock cycle (lets call this CPU **IdealRV**), hence Cycles per Instruction (CPI) = 1, then one pass of `count32_noprintf.c` = 23 clock cycles
 
-If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no libraries were called, but since display is non functional the count program could be optimised by removing 8 (display) cpu cycles and 1 cpu cycle from the call to display from .L4, this would make the optimised count program taking 13 cpu cycles or 1.4 microseconds.
+If the CPU was **10Mhz** then one count loop would take 2.3 microseconds if no libraries were called, but since display is non functional the count program could be optimised by removing 8 (display) cpu cycles and 1 cpu cycle from the call to display from .L4, this would make the optimised count program taking 14 cpu cycles or 1.4 microseconds.
 
 On the second pass the 4 inital instructions of main are skipped, so only 10 .L4 loop instructions are run until the count gets to 16  plus the 8 display instructions. The **.L4 loop** + **display** = 1.8 microseconds and 1.7 microseconds when the count gets to 16. 
 
@@ -151,7 +151,7 @@ CPU time = 4 (CPI) * 292 instuctions * 0.1uS (10Mhz clock)
 
 The relative performance between IdealRV and PicoRV32 for the same CPU clock is:
 ```
-CPI performance ratio to reference IdealRV CPU
+CPI performance ratio of reference IdealRV CPU to PicoRV32
  = 4 (CPI PicoRV32)/ 1 (CPI IdealRV)
  = 4
 ```
