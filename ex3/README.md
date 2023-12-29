@@ -120,7 +120,7 @@ Hence we expect the whole count sequence to 16 to equal (the loop count sequence
 ```
 first pass + 14 * second pass + last pass
  = 23 inst + 14 * 18 + 17
- = 292 cpu cycles (or instuctions for CPI=1)
+ = 292 cpu cycles (or instructions for CPI=1)
 
 CPU time = 1 (CPI) * 292 * 0.1uS (10mhz clock)
  = 29.2 microseconds
@@ -149,9 +149,10 @@ CPU time = 4 (CPI) * 292 instuctions * 0.1uS (10Mhz clock)
  = 116.8 microsconds
 ```
 
-The relative performance between IdealRV and PicoRV32 for the same CPU clock is:
+The relative performance between the IdealRV and PicoRV32 CPU's for the same CPU clock is:
 ```
-CPI performance ratio of reference IdealRV CPU to PicoRV32
+CPI performance ratio of reference IdealRV to PicoRV32 CPU's
  = 4 (CPI PicoRV32)/ 1 (CPI IdealRV)
  = 4
+*IdealRV is 4 time faster*
 ```
