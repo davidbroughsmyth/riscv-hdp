@@ -151,8 +151,16 @@ CPU time = 4 (CPI) * 292 instuctions * 0.1uS (10Mhz clock)
 
 The relative performance between the IdealRV and PicoRV32 CPU's for the same CPU clock is:
 ```
-CPI performance ratio of reference IdealRV to PicoRV32 CPU's
+CPI performance ratio of the reference IdealRV to PicoRV32 CPU's
  = 4 (CPI PicoRV32)/ 1 (CPI IdealRV)
  = 4
 ```
-*IdealRV is 4 time faster*
+*IdealRV is 4 times faster*
+
+If the PicoRV32 CPU clock runs at 100Mhz instead
+'''
+CPU performance ratio of the reference IdealRV to PicoRV32 CPU's
+ = 4 (CPI PicoRV32) * 0.01uS/ 1 (CPI IdealRV) * 0.1uS
+ = 0.4
+```
+*IdealRV is .4 times slower, or PicoRV32 is 2.5 times faster*
