@@ -154,5 +154,5 @@ The relative performance between the IdealRV and PicoRV32 CPU's for the same CPU
 CPI performance ratio of reference IdealRV to PicoRV32 CPU's
  = 4 (CPI PicoRV32)/ 1 (CPI IdealRV)
  = 4
-*IdealRV is 4 time faster*
 ```
+*IdealRV is 4 time faster*
