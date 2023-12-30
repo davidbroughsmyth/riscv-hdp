@@ -1,0 +1,60 @@
+
+doorbell.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <sleep>:
+   10074:	fd010113          	add	sp,sp,-48
+   10078:	02812623          	sw	s0,44(sp)
+   1007c:	03010413          	add	s0,sp,48
+   10080:	fca42e23          	sw	a0,-36(s0)
+   10084:	fe042623          	sw	zero,-20(s0)
+   10088:	0140006f          	j	1009c <sleep+0x28>
+   1008c:	00000013          	nop
+   10090:	fec42783          	lw	a5,-20(s0)
+   10094:	00178793          	add	a5,a5,1
+   10098:	fef42623          	sw	a5,-20(s0)
+   1009c:	fdc42683          	lw	a3,-36(s0)
+   100a0:	00068713          	mv	a4,a3
+   100a4:	00571793          	sll	a5,a4,0x5
+   100a8:	00078713          	mv	a4,a5
+   100ac:	40d70733          	sub	a4,a4,a3
+   100b0:	00671793          	sll	a5,a4,0x6
+   100b4:	40e787b3          	sub	a5,a5,a4
+   100b8:	00379793          	sll	a5,a5,0x3
+   100bc:	00d787b3          	add	a5,a5,a3
+   100c0:	00679793          	sll	a5,a5,0x6
+   100c4:	00078713          	mv	a4,a5
+   100c8:	fec42783          	lw	a5,-20(s0)
+   100cc:	fce7c0e3          	blt	a5,a4,1008c <sleep+0x18>
+   100d0:	00000013          	nop
+   100d4:	00000013          	nop
+   100d8:	02c12403          	lw	s0,44(sp)
+   100dc:	03010113          	add	sp,sp,48
+   100e0:	00008067          	ret
+
+000100e4 <main>:
+   100e4:	fe010113          	add	sp,sp,-32
+   100e8:	00112e23          	sw	ra,28(sp)
+   100ec:	00812c23          	sw	s0,24(sp)
+   100f0:	02010413          	add	s0,sp,32
+   100f4:	00100793          	li	a5,1
+   100f8:	fef42623          	sw	a5,-20(s0)
+   100fc:	fe042423          	sw	zero,-24(s0)
+   10100:	fec42703          	lw	a4,-20(s0)
+   10104:	00100793          	li	a5,1
+   10108:	02f71463          	bne	a4,a5,10130 <main+0x4c>
+   1010c:	00100793          	li	a5,1
+   10110:	fef42423          	sw	a5,-24(s0)
+   10114:	00100513          	li	a0,1
+   10118:	f5dff0ef          	jal	10074 <sleep>
+   1011c:	fe042423          	sw	zero,-24(s0)
+   10120:	00100513          	li	a0,1
+   10124:	f51ff0ef          	jal	10074 <sleep>
+   10128:	fe042623          	sw	zero,-20(s0)
+   1012c:	fd5ff06f          	j	10100 <main+0x1c>
+   10130:	fe042423          	sw	zero,-24(s0)
+   10134:	00100793          	li	a5,1
+   10138:	fef42623          	sw	a5,-20(s0)
+   1013c:	fc5ff06f          	j	10100 <main+0x1c>
