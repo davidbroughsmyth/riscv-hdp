@@ -1,0 +1,8 @@
+
+noprv.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <__BSS_END__-0x1004>:
+   10074:	00000013          	nop
