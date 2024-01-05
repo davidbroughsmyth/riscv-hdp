@@ -1,0 +1,14 @@
+
+zerorv_void.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	ff010113          	add	sp,sp,-16
+   10078:	00812623          	sw	s0,12(sp)
+   1007c:	01010413          	add	s0,sp,16
+   10080:	00000013          	nop
+   10084:	00c12403          	lw	s0,12(sp)
+   10088:	01010113          	add	sp,sp,16
+   1008c:	00008067          	ret

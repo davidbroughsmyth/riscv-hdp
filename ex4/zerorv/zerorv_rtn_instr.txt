@@ -1,0 +1,7 @@
+Number of different instructions: 6
+mv
+lw
+sw
+li
+add
+ret
