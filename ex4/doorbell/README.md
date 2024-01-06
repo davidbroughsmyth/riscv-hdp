@@ -12,7 +12,7 @@ Very basic doorbell with one button to activate a bell
 1. doorbell_test.c - app for testing the GPIO x30 registor
 1. doorbell.c - stripped for verilog generation
 
-```
+``` C
 // #include <stdio.h>
 // #include <stdlib.h>
 
