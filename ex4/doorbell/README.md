@@ -8,9 +8,12 @@ Very basic doorbell with one button to activate a bell
 ![image](../../images/riscv_doorbell.png)
 
 #### x30 GPIO allocation
+Output:
+
 x30[0] - Buzzer output control
 
 Input:
+
 x30[31] - Button input signal
 
 #### C code
