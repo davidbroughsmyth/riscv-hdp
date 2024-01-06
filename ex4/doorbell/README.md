@@ -10,11 +10,11 @@ Very basic doorbell with one button to activate a bell
 #### x30 GPIO allocation
 Output:
 
-x30[0] - Buzzer output control
+x30[0] - enable buzzer sound: active high
 
 Input:
 
-x30[31] - Button input signal
+x30[31] - detect button signal: active high
 
 #### C code
 1. doorbell_concept.c - original thinking
