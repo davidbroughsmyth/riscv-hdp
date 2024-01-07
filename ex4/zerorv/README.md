@@ -2,12 +2,12 @@
 The smallest c program footprint. Used only to validate very basic riscv cpu generation, as it has no input or output and the program is the smallest possible for c to generate. Useful to validate verilog simlations as the programs steps are small enough to trace through the waveforms. 
 
 **ZeroRV** with implicit int return
-```
+``` C
 int main()
 {
 }
 ```
-Assembly Listing
+Assembly Listing:
 ``` Assembly
 zerorv.o:     file format elf32-littleriscv
 
@@ -25,13 +25,13 @@ Disassembly of section .text:
    10090:	00008067          	ret
 ```
 **ZeroRv_rtn** with explicit int return
-```
+``` C
 int main()
 {
 	return(0);
 }
 ```
-Assembly Listing
+Assembly Listing:
 ``` Assembly
 zerorv_rtn.o:     file format elf32-littleriscv
 
@@ -50,12 +50,12 @@ Disassembly of section .text:
 ```
 
 **ZeroRV_void** void return
-```
+``` C
 void main()
 {
 }
 ```
-Assembly Listing
+Assembly Listing:
 ``` Assembly
 zerorv_void.o:     file format elf32-littleriscv
 
@@ -78,7 +78,7 @@ One riscv nop instruction.
 ``` assembly
 asm("nop");
 ```
-Assembly listing
+Assembly listing:
 ``` Assembly
 
 noprv.o:     file format elf32-littleriscv
