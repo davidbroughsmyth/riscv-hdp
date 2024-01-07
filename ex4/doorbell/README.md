@@ -106,3 +106,5 @@ nop
 mv
 sw
 ```
+#### Testing app via x30 GPIO bits 
+![image](../../images/doorbel_test.png)
