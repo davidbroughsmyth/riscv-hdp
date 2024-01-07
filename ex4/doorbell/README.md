@@ -107,4 +107,4 @@ mv
 sw
 ```
 #### Testing app via x30 GPIO bits 
-![image](../../images/doorbel_test.png)
+![image](../../images/doorbell_test.png)
