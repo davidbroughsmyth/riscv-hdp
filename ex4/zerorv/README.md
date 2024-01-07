@@ -7,13 +7,46 @@ int main()
 {
 }
 ```
+Assembly Listing
+``` Assembly
+zerorv.o:     file format elf32-littleriscv
 
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	ff010113          	add	sp,sp,-16
+   10078:	00812623          	sw	s0,12(sp)
+   1007c:	01010413          	add	s0,sp,16
+   10080:	00000793          	li	a5,0
+   10084:	00078513          	mv	a0,a5
+   10088:	00c12403          	lw	s0,12(sp)
+   1008c:	01010113          	add	sp,sp,16
+   10090:	00008067          	ret
+```
 **ZeroRv_rtn** with explicit int return
 ```
 int main()
 {
 	return(0);
 }
+```
+Assembly Listing
+``` Assembly
+zerorv_rtn.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	ff010113          	add	sp,sp,-16
+   10078:	00812623          	sw	s0,12(sp)
+   1007c:	01010413          	add	s0,sp,16
+   10080:	00000793          	li	a5,0
+   10084:	00078513          	mv	a0,a5
+   10088:	00c12403          	lw	s0,12(sp)
+   1008c:	01010113          	add	sp,sp,16
+   10090:	00008067          	ret
 ```
 
 **ZeroRV_void** void return
@@ -22,12 +55,39 @@ void main()
 {
 }
 ```
+Assembly Listing
+``` Assembly
+zerorv_void.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	ff010113          	add	sp,sp,-16
+   10078:	00812623          	sw	s0,12(sp)
+   1007c:	01010413          	add	s0,sp,16
+   10080:	00000013          	nop
+   10084:	00c12403          	lw	s0,12(sp)
+   10088:	01010113          	add	sp,sp,16
+   1008c:	00008067          	ret
+```
 Both ZeroRV and ZeroRv_rtn have 6 instructions, ZeroRV_void has 5 by removing the return.
 
 ### NopRV
 One riscv nop instruction.  
 ``` assembly
 asm("nop");
+```
+Assembly listing
+``` Assembly
+
+noprv.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <__BSS_END__-0x1004>:
+   10074:	00000013          	nop
 ```
 
 #### Block Diagram
