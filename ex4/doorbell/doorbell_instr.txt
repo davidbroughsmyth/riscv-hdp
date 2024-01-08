@@ -1,0 +1,14 @@
+Number of different instructions: 13
+sll
+bne
+sw
+blt
+nop
+lw
+ret
+mv
+jal
+sub
+li
+j
+add
