@@ -1,0 +1,75 @@
+
+doorbell.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	fe010113          	add	sp,sp,-32
+   10078:	00112e23          	sw	ra,28(sp)
+   1007c:	00812c23          	sw	s0,24(sp)
+   10080:	02010413          	add	s0,sp,32
+   10084:	fe042423          	sw	zero,-24(s0)
+   10088:	00100793          	li	a5,1
+   1008c:	fef42223          	sw	a5,-28(s0)
+   10090:	0b8000ef          	jal	10148 <readButton>
+   10094:	fea42423          	sw	a0,-24(s0)
+   10098:	00100793          	li	a5,1
+   1009c:	fe842703          	lw	a4,-24(s0)
+   100a0:	00f71a63          	bne	a4,a5,100b4 <main+0x40>
+   100a4:	00100793          	li	a5,1
+   100a8:	00078513          	mv	a0,a5
+   100ac:	064000ef          	jal	10110 <setBuzzer>
+   100b0:	0100006f          	j	100c0 <main+0x4c>
+   100b4:	00000793          	li	a5,0
+   100b8:	00078513          	mv	a0,a5
+   100bc:	054000ef          	jal	10110 <setBuzzer>
+   100c0:	fe042623          	sw	zero,-20(s0)
+   100c4:	0140006f          	j	100d8 <main+0x64>
+   100c8:	00000013          	nop
+   100cc:	fec42783          	lw	a5,-20(s0)
+   100d0:	00178793          	add	a5,a5,1
+   100d4:	fef42623          	sw	a5,-20(s0)
+   100d8:	fe442683          	lw	a3,-28(s0)
+   100dc:	00068713          	mv	a4,a3
+   100e0:	00571793          	sll	a5,a4,0x5
+   100e4:	00078713          	mv	a4,a5
+   100e8:	40d70733          	sub	a4,a4,a3
+   100ec:	00671793          	sll	a5,a4,0x6
+   100f0:	40e787b3          	sub	a5,a5,a4
+   100f4:	00379793          	sll	a5,a5,0x3
+   100f8:	00d787b3          	add	a5,a5,a3
+   100fc:	00679793          	sll	a5,a5,0x6
+   10100:	00078713          	mv	a4,a5
+   10104:	fec42783          	lw	a5,-20(s0)
+   10108:	fce7c0e3          	blt	a5,a4,100c8 <main+0x54>
+   1010c:	f85ff06f          	j	10090 <main+0x1c>
+
+00010110 <setBuzzer>:
+   10110:	fd010113          	add	sp,sp,-48
+   10114:	02812623          	sw	s0,44(sp)
+   10118:	03010413          	add	s0,sp,48
+   1011c:	fca42e23          	sw	a0,-36(s0)
+   10120:	ffe00793          	li	a5,-2
+   10124:	fef42623          	sw	a5,-20(s0)
+   10128:	fdc42783          	lw	a5,-36(s0)
+   1012c:	fec42703          	lw	a4,-20(s0)
+   10130:	00ef7f33          	and	t5,t5,a4
+   10134:	00ff6f33          	or	t5,t5,a5
+   10138:	00000013          	nop
+   1013c:	02c12403          	lw	s0,44(sp)
+   10140:	03010113          	add	sp,sp,48
+   10144:	00008067          	ret
+
+00010148 <readButton>:
+   10148:	fe010113          	add	sp,sp,-32
+   1014c:	00812e23          	sw	s0,28(sp)
+   10150:	02010413          	add	s0,sp,32
+   10154:	01ff5513          	srl	a0,t5,0x1f
+   10158:	00157793          	and	a5,a0,1
+   1015c:	fef42623          	sw	a5,-20(s0)
+   10160:	fec42783          	lw	a5,-20(s0)
+   10164:	00078513          	mv	a0,a5
+   10168:	01c12403          	lw	s0,28(sp)
+   1016c:	02010113          	add	sp,sp,32
+   10170:	00008067          	ret
