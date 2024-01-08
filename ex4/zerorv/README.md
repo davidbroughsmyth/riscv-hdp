@@ -107,7 +107,7 @@ riscv64-unknown-elf-objdump -d -r noprv.o > noprv_assembly.txt
 ### Verilog NopRV
 -- compiler verilog with test bench
 
-Note that the alu_tb.v test bench sets up the test operations and defines the name of the .vcd file for gtkwave
+Note that testbench.v sets up the test operations and defines the name of the .vcd file for gtkwave
 ```
 iverilog -o noprv_v testbench.v processor.v
 ```
@@ -115,10 +115,10 @@ iverilog -o noprv_v testbench.v processor.v
 ```
 vvp noprv_v
 ```
-![image](../images/noprv_verilog_run.png)
+![image](../../images/noprv_verilog_run.png)
 
 -- display gtkwave for ALU
 ```
 gtkwave.vcd waveform.vcd
 ```
-![image](../images/noprv_gtkwave.png)
+![image](../../images/noprv_gtkwave.png)
