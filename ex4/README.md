@@ -8,7 +8,7 @@
 1. Serial echo
 1. Serial monitor
 1. Riscv machine code monitor
-1. iscv machine code monitor with Wifi 
+1. Riscv machine code monitor with Wifi 
 1. Stress and vibration IOT monitor
 1. Stress and vibration IOT monitor with Verlog Neuromorphic module
 
