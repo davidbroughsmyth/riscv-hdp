@@ -5,12 +5,12 @@
 1. Secure code doorlock - tamper proof door locking/unlocking 
 
 #### Future Apps
-1. Serial echo
-1. Serial monitor
-1. Riscv machine code monitor
-1. Riscv machine code monitor with Wifi 
-1. Stress and vibration IOT monitor
-1. Stress and vibration IOT monitor with Verlog Neuromorphic module
+1. Serial uart echo
+1. Serial uart monitor
+1. Riscv machine code monitor - over serial
+1. Riscv machine code monitor with Wifi - serial to Wifi 
+1. Stress and vibration IOT monitor - datalogger with pattern recognition
+1. Stress and vibration IOT monitor with Verlog Neuromorphic module - AI edge desicions
 
 
 #### Utility programs
