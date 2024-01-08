@@ -10,7 +10,7 @@
 1. Riscv machine code monitor - over serial
 1. Riscv machine code monitor with Wifi - serial to Wifi 
 1. Stress and vibration IOT monitor - datalogger with pattern recognition
-1. Stress and vibration IOT monitor with Verlog Neuromorphic module - AI edge desicions
+1. Stress and vibration IOT monitor with a Verlog Neuromorphic module - enable AI edge decision making
 
 
 #### Utility programs
