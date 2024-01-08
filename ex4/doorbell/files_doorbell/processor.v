@@ -4,239 +4,297 @@
 (* generator = "Amaranth" *)
 module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_type, inst_type1, inst_type2, inst_type3, shamt, web, result, wmask, reg_addr_out, csb);
   reg \$auto$verilog_backend.cc:2184:dump_module$1  = 0;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
   wire \$1 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
   wire \$101 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
   wire \$103 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" *)
   wire \$105 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" *)
   wire \$107 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" *)
   wire \$109 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$11 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$111 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$113 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$115 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$117 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$119 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$121 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-  wire \$123 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-  wire \$125 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-  wire \$127 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-  wire \$129 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$13 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-  wire \$131 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$133 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:83" *)
-  wire \$135 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:84" *)
-  wire [32:0] \$137 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:84" *)
-  wire [32:0] \$138 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:85" *)
-  wire \$140 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:86" *)
-  wire [32:0] \$142 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:86" *)
-  wire [32:0] \$143 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:87" *)
-  wire \$145 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" *)
-  wire [31:0] \$147 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *)
-  wire \$149 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$15 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" *)
-  wire [31:0] \$151 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$153 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *)
-  wire \$155 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:100" *)
-  wire [31:0] \$157 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *)
-  wire [8:0] \$158 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:100" *)
-  wire [9:0] \$160 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$163 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:109" *)
-  wire \$165 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$167 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-  wire \$169 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$17 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:120" *)
-  wire [32:0] \$171 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:120" *)
-  wire [32:0] \$172 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$174 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" *)
-  wire \$176 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
-  wire \$178 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
-  wire \$180 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" *)
-  wire \$182 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" *)
-  wire \$184 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" *)
-  wire \$186 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" *)
-  wire \$188 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$19 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" *)
-  wire \$190 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$192 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-  wire \$194 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:153" *)
-  wire [32:0] \$196 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:153" *)
-  wire [32:0] \$197 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-  wire \$199 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
-  wire [31:0] \$201 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-  wire \$203 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:164" *)
-  wire [31:0] \$205 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *)
-  wire [8:0] \$206 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:164" *)
-  wire [9:0] \$208 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$21 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-  wire \$211 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:171" *)
-  wire [62:0] \$213 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:171" *)
-  wire [62:0] \$214 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-  wire \$216 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:173" *)
-  wire [32:0] \$218 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:173" *)
-  wire [32:0] \$219 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$221 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-  wire \$223 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$23 ;
+  wire \$11 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" *)
+  wire \$111 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" *)
+  wire \$113 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-  wire \$25 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-  wire \$27 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-  wire \$29 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$3 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-  wire \$31 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-  wire \$33 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$35 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$37 ;
+  wire \$115 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" *)
+  wire \$117 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" *)
+  wire \$119 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" *)
+  wire \$121 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" *)
+  wire \$123 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$125 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$127 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$39 ;
+  wire \$129 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$13 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$41 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$43 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$45 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-  wire \$47 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-  wire \$49 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$5 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-  wire \$51 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-  wire \$53 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-  wire \$55 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$57 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$59 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$61 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$63 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-  wire \$65 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$67 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-  wire \$69 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$7 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-  wire \$71 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-  wire \$73 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-  wire \$75 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-  wire \$77 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-  wire \$79 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-  wire \$81 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-  wire \$83 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *)
-  wire \$85 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-  wire \$87 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-  wire \$89 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$9 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-  wire \$91 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" *)
-  wire \$93 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
-  wire \$95 ;
+  wire \$131 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$133 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$135 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$137 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+  wire \$139 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+  wire \$141 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+  wire \$143 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+  wire \$145 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+  wire \$147 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$149 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$15 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+  wire \$151 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$153 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" *)
+  wire \$155 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *)
+  wire [32:0] \$157 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *)
+  wire [32:0] \$158 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" *)
+  wire \$160 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:91" *)
+  wire [32:0] \$162 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:91" *)
+  wire [32:0] \$163 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
+  wire \$165 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:94" *)
+  wire \$167 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:93" *)
+  wire [62:0] \$169 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+  wire \$17 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:93" *)
+  wire [62:0] \$170 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:96" *)
+  wire [31:0] \$172 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:97" *)
+  wire \$174 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *)
+  wire [31:0] \$176 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:99" *)
+  wire \$178 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:100" *)
+  wire [31:0] \$180 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$182 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" *)
+  wire \$184 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:110" *)
+  wire [31:0] \$186 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *)
+  wire [8:0] \$187 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:110" *)
+  wire [9:0] \$189 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$19 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+  wire \$192 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:119" *)
+  wire \$194 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$196 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+  wire \$198 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
+  wire [32:0] \$200 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
+  wire [32:0] \$201 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$203 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" *)
+  wire \$205 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" *)
+  wire \$207 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" *)
+  wire \$209 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$21 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" *)
+  wire \$211 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:146" *)
+  wire [32:0] \$213 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:146" *)
+  wire [32:0] \$214 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" *)
+  wire \$216 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
+  wire \$218 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" *)
+  wire \$220 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" *)
+  wire \$222 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" *)
+  wire \$224 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" *)
+  wire \$226 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$228 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$23 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+  wire \$230 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:167" *)
+  wire [32:0] \$232 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:167" *)
+  wire [32:0] \$233 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+  wire \$235 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:173" *)
+  wire [31:0] \$237 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+  wire \$239 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:179" *)
+  wire [31:0] \$241 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+  wire \$243 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:184" *)
+  wire [31:0] \$245 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *)
+  wire [8:0] \$246 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:184" *)
+  wire [9:0] \$248 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+  wire \$25 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+  wire \$251 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:191" *)
+  wire [62:0] \$253 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:191" *)
+  wire [62:0] \$254 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$256 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:198" *)
+  wire [31:0] \$258 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+  wire \$260 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:200" *)
+  wire [32:0] \$262 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:200" *)
+  wire [32:0] \$263 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$265 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
+  wire \$267 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:94" *)
+  wire \$269 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+  wire \$27 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$271 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$273 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$275 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+  wire \$277 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+  wire \$29 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$3 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+  wire \$31 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+  wire \$33 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$35 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+  wire \$37 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$39 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$41 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+  wire \$43 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$45 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$47 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$49 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+  wire \$5 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+  wire \$51 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+  wire \$53 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+  wire \$55 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+  wire \$57 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+  wire \$59 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$61 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+  wire \$63 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$65 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$67 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+  wire \$69 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$7 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+  wire \$71 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+  wire \$73 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$75 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+  wire \$77 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+  wire \$79 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+  wire \$81 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+  wire \$83 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+  wire \$85 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+  wire \$87 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+  wire \$89 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+  wire \$9 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+  wire \$91 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+  wire \$93 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+  wire \$95 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" *)
   wire \$97 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
   wire \$99 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:14" *)
   input [31:0] Ra;
   wire [31:0] Ra;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:12" *)
+  reg [31:0] Ra_unsigned;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:15" *)
   input [31:0] Rb;
   wire [31:0] Rb;
@@ -300,127 +358,148 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:41" *)
   output [3:0] wmask;
   reg [3:0] wmask;
-  assign \$133  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *) 3'h7;
-  assign \$135  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:83" *) 6'h33;
-  assign \$138  = $signed(Ra) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:84" *) $signed(Rb);
-  assign \$140  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:85" *) 11'h433;
-  assign \$143  = $signed(Ra) - (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:86" *) $signed(Rb);
-  assign \$145  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:87" *) 10'h333;
-  assign \$147  = $signed(Rb) | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" *) $signed(Ra);
-  assign \$149  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *) 10'h3b3;
-  assign \$151  = $signed(Rb) & (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" *) $signed(Ra);
-  assign \$153  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *) 3'h6;
-  assign \$155  = inst_type3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *) 7'h6f;
-  assign \$163  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *) 3'h5;
-  assign \$165  = inst_type3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:109" *) 6'h37;
-  assign \$174  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *) 3'h4;
-  assign \$176  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" *) 7'h63;
-  assign \$178  = $signed(Ra) == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *) $signed(Rb);
-  assign \$180  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *) 10'h263;
-  assign \$182  = $signed(Ra) < (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" *) $signed(Rb);
-  assign \$184  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" *) 10'h2e3;
-  assign \$188  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" *) 10'h3e3;
-  assign \$190  = $signed(Ra) >= (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" *) $signed(Rb);
-  assign \$192  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *) 1'h1;
-  assign \$194  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *) 5'h13;
-  assign \$199  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *) 10'h393;
-  assign \$201  = $signed(Ra) & (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *) $signed(immediate);
-  assign \$203  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *) 7'h67;
-  assign \$206  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *) pc;
-  assign \$208  = $signed(\$206 ) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:164" *) $signed(9'h1fe);
-  assign \$205  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:164" *) $signed(\$208 );
-  assign \$211  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *) 8'h93;
-  assign \$214  = $signed(Ra) <<< (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:171" *) shamt;
-  assign \$216  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *) 9'h103;
-  assign \$219  = $signed(Ra) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:173" *) $signed(immediate);
-  assign \$221  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *) 2'h3;
-  assign \$223  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *) 9'h123;
+  assign \$155  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" *) 6'h33;
+  assign \$158  = $signed(Ra) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *) $signed(Rb);
+  assign \$160  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" *) 11'h433;
+  assign \$163  = $signed(Ra) - (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:91" *) $signed(Rb);
+  assign \$170  = $signed(Ra) <<< (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:93" *) shamt1;
+  assign \$172  = Ra_unsigned >>> (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:96" *) shamt1;
+  assign \$174  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:97" *) 10'h333;
+  assign \$176  = $signed(Rb) | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *) $signed(Ra);
+  assign \$178  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:99" *) 10'h3b3;
+  assign \$180  = $signed(Rb) & (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:100" *) $signed(Ra);
+  assign \$182  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *) 3'h6;
+  assign \$184  = inst_type3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" *) 7'h6f;
+  assign \$189  = $signed(\$187 ) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:110" *) $signed(9'h1fe);
+  assign \$192  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *) 3'h5;
+  assign \$194  = inst_type3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:119" *) 6'h37;
+  assign \$203  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *) 3'h4;
+  assign \$205  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" *) 7'h63;
+  assign \$207  = $signed(Ra) == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" *) $signed(Rb);
+  assign \$209  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" *) 8'he3;
+  assign \$211  = $signed(Ra) != (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" *) $signed(Rb);
+  assign \$216  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" *) 10'h263;
+  assign \$218  = $signed(Ra) < (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *) $signed(Rb);
+  assign \$220  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" *) 10'h2e3;
+  assign \$224  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" *) 10'h3e3;
+  assign \$226  = $signed(Ra) >= (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" *) $signed(Rb);
+  assign \$230  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *) 5'h13;
+  assign \$235  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *) 10'h313;
+  assign \$237  = $signed(Ra) | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:173" *) $signed(immediate);
+  assign \$239  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *) 10'h393;
+  assign \$241  = $signed(Ra) & (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:179" *) $signed(immediate);
+  assign \$243  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *) 7'h67;
+  assign \$246  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:33" *) pc;
+  assign \$245  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:184" *) $signed(\$248 );
+  assign \$251  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *) 8'h93;
+  assign \$254  = $signed(Ra) <<< (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:191" *) shamt;
+  assign \$258  = Ra_unsigned >>> (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:198" *) shamt;
+  assign \$260  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *) 9'h103;
+  assign \$263  = $signed(Ra) + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:200" *) $signed(immediate);
+  assign \$265  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *) 3'h7;
+  assign \$267  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *) 8'hb3;
+  assign \$269  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:94" *) 10'h2b3;
+  assign \$271  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *) 1'h1;
+  assign \$273  = inst_type1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *) 10'h293;
+  assign \$275  = inst_type == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *) 2'h3;
+  assign \$277  = inst_type2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *) 9'h123;
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     branching = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-    casez (\$81 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$93 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           branching = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$83 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
+    casez (\$95 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *)
-          casez (\$85 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" *)
+          casez (\$97 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" */
             1'h1:
                 branching = 1'h1;
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$87 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
-      1'h1:
-          branching = 1'h0;
-    endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$89 )
+    casez (\$99 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
       1'h1:
           branching = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$91 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$101 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
+      1'h1:
+          branching = 1'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$103 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" *)
-          casez (\$93 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" */
-            1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
-                casez (\$95 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" */
-                  1'h1:
-                      branching = 1'h1;
-                endcase
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
-          casez (\$97 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
-            1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" *)
-                casez (\$99 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" */
-                  1'h1:
-                      branching = 1'h1;
-                endcase
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" *)
-          casez (\$101 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" */
-            1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" *)
-                casez (\$103 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" */
-                  1'h1:
-                      branching = 1'h1;
-                endcase
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" *)
           casez (\$105 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" */
             1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" *)
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" *)
                 casez (\$107 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" */
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" */
+                  1'h1:
+                      branching = 1'h1;
+                endcase
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" *)
+          casez (\$109 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" */
+            1'h1:
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" *)
+                casez (\$111 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" */
+                  1'h1:
+                      branching = 1'h1;
+                endcase
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" *)
+          casez (\$113 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" */
+            1'h1:
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
+                casez (\$115 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
+                  1'h1:
+                      branching = 1'h1;
+                endcase
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" *)
+          casez (\$117 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" */
+            1'h1:
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" *)
+                casez (\$119 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" */
+                  1'h1:
+                      branching = 1'h1;
+                endcase
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" *)
+          casez (\$121 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" */
+            1'h1:
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" *)
+                casez (\$123 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" */
                   1'h1:
                       branching = 1'h1;
                 endcase
           endcase
         end
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-    casez (\$109 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$125 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
           branching = 1'h0;
     endcase
@@ -428,68 +507,80 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     jump = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-    casez (\$111 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
-      1'h1:
-          jump = 1'h0;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$113 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$127 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           jump = 1'h0;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$115 )
+    casez (\$129 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
           jump = 1'h0;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$117 )
+    casez (\$131 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
       1'h1:
           jump = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$119 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$133 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
       1'h1:
           jump = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-    casez (\$121 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$135 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
+      1'h1:
+          jump = 1'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$137 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-          casez (\$123 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+          casez (\$139 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" */
             1'h1:
                 jump = 1'h0;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-          casez (\$125 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+          casez (\$141 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" */
             1'h1:
                 jump = 1'h0;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-          casez (\$127 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+          casez (\$143 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" */
+            1'h1:
+                jump = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+          casez (\$145 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" */
             1'h1:
                 jump = 1'h1;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-          casez (\$129 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+          casez (\$147 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" */
             1'h1:
                 jump = 1'h0;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-          casez (\$131 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$149 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                jump = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+          casez (\$151 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" */
             1'h1:
                 jump = 1'h0;
           endcase
@@ -499,169 +590,230 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     result = 32'd0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-    casez (\$133 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$153 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:83" *)
-          casez (\$135 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:83" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" *)
+          casez (\$155 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:88" */
             1'h1:
-                result = \$138 [31:0];
+                result = \$158 [31:0];
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:85" *)
-          casez (\$140 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:85" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" *)
+          casez (\$160 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:90" */
             1'h1:
-                result = \$143 [31:0];
+                result = \$163 [31:0];
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:87" *)
-          casez (\$145 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:87" */
-            1'h1:
-                result = \$147 ;
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
+          casez ({ \$167 , \$165  })
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+            2'b?1:
+                result = \$170 [31:0];
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:94" */
+            2'b1?:
+                result = \$172 ;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" *)
-          casez (\$149 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:89" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:97" *)
+          casez (\$174 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:97" */
             1'h1:
-                result = \$151 ;
+                result = \$176 ;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:99" *)
+          casez (\$178 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:99" */
+            1'h1:
+                result = \$180 ;
           endcase
         end
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$153 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
-      1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" *)
-          casez (\$155 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:98" */
-            1'h1:
-                result = \$157 ;
-          endcase
-    endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$163 )
+    casez (\$182 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:109" *)
-          casez (\$165 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:109" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" *)
+          casez (\$184 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:108" */
+            1'h1:
+                result = \$186 ;
+          endcase
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
+    casez (\$192 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
+      1'h1:
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:119" *)
+          casez (\$194 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:119" */
             1'h1:
                 result = immediate;
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$167 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$196 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
       1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-          casez (\$169 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+          casez (\$198 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" */
             1'h1:
-                result = \$172 [31:0];
+                result = \$201 [31:0];
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$174 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$203 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" *)
-          casez (\$176 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:129" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" *)
+          casez (\$205 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:139" */
             1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" *)
-                casez (\$178 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:130" */
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" *)
+                casez (\$207 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:140" */
                   1'h1:
                       result = immediate;
                 endcase
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
-          casez (\$180 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" *)
+          casez (\$209 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:143" */
             1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" *)
-                casez (\$182 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:134" */
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" *)
+                casez (\$211 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:144" */
+                  1'h1:
+                      result = \$214 [31:0];
+                endcase
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" *)
+          casez (\$216 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:147" */
+            1'h1:
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
+                casez (\$218 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
                   1'h1:
                       result = immediate;
                 endcase
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" *)
-          casez (\$184 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:137" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" *)
+          casez (\$220 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:151" */
             1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" *)
-                casez (\$186 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:138" */
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" *)
+                casez (\$222 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:152" */
                   1'h1:
                       result = immediate;
                 endcase
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" *)
-          casez (\$188 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:141" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" *)
+          casez (\$224 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:155" */
             1'h1:
-                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" *)
-                casez (\$190 )
-                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:142" */
+                (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" *)
+                casez (\$226 )
+                  /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:156" */
                   1'h1:
                       result = immediate;
                 endcase
           endcase
         end
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-    casez (\$192 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$228 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-          casez (\$194 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
+          casez (\$230 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" */
             1'h1:
-                result = \$197 [31:0];
+                result = \$233 [31:0];
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-          casez (\$199 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+          casez (\$235 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" */
             1'h1:
-                result = \$201 ;
+                result = \$237 ;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-          casez (\$203 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+          casez (\$239 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" */
             1'h1:
-                result = \$205 ;
+                result = \$241 ;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-          casez (\$211 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+          casez (\$243 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" */
             1'h1:
-                result = \$214 [31:0];
+                result = \$245 ;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
-          casez (\$216 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+          casez (\$251 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" */
             1'h1:
-                result = \$219 [31:0];
+                result = \$254 [31:0];
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$256 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                result = \$258 ;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+          casez (\$260 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" */
+            1'h1:
+                result = \$263 [31:0];
           endcase
         end
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
-    data_to_mem = 32'd0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$221 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
+    Ra_unsigned = 32'd0;
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$265 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-          casez (\$223 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
+          casez ({ \$269 , \$267  })
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+            2'b?1:
+                /* empty */;
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:94" */
+            2'b1?:
+                Ra_unsigned = Ra;
+          endcase
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$271 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
+      1'h1:
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$273 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                Ra_unsigned = Ra;
+          endcase
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
+    data_to_mem = 32'd0;
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$275 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
+      1'h1:
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+          casez (\$277 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" */
             1'h1:
                 data_to_mem = Rb;
           endcase
@@ -670,39 +822,39 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     load_wb = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
     casez (\$1 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
-      1'h1:
-          load_wb = 1'h1;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$3 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           load_wb = 1'h1;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$5 )
+    casez (\$3 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
           load_wb = 1'h1;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$7 )
+    casez (\$5 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
       1'h1:
-          load_wb = 1'h0;
+          load_wb = 1'h1;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$9 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$7 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
       1'h1:
           load_wb = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$9 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
+      1'h1:
+          load_wb = 1'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
     casez (\$11 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
           load_wb = 1'h1;
     endcase
@@ -710,68 +862,80 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     csb = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
     casez (\$13 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
-      1'h1:
-          csb = 1'h1;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$15 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           csb = 1'h1;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$17 )
+    casez (\$15 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
           csb = 1'h1;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$19 )
+    casez (\$17 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
-      1'h1:
-          csb = 1'h0;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$21 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
       1'h1:
           csb = 1'h1;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$19 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
+      1'h1:
+          csb = 1'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$21 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
+      1'h1:
+          csb = 1'h1;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
     casez (\$23 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
           casez (\$25 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" */
             1'h1:
                 csb = 1'h1;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
           casez (\$27 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" */
             1'h1:
                 csb = 1'h1;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
           casez (\$29 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" */
             1'h1:
                 csb = 1'h1;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
           casez (\$31 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" */
             1'h1:
                 csb = 1'h1;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
           casez (\$33 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" */
+            1'h1:
+                csb = 1'h1;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$35 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                csb = 1'h1;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+          casez (\$37 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" */
             1'h1:
                 csb = 1'h0;
           endcase
@@ -781,68 +945,80 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     web = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-    casez (\$35 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$39 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           web = 1'h1;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$37 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
-      1'h1:
-          web = 1'h0;
-    endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$39 )
+    casez (\$41 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
           web = 1'h0;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$41 )
+    casez (\$43 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
       1'h1:
           web = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$43 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$45 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
       1'h1:
           web = 1'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-    casez (\$45 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$47 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
+      1'h1:
+          web = 1'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$49 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-          casez (\$47 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
-            1'h1:
-                web = 1'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-          casez (\$49 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" */
-            1'h1:
-                web = 1'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
           casez (\$51 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" */
             1'h1:
                 web = 1'h0;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
           casez (\$53 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" */
             1'h1:
                 web = 1'h0;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
           casez (\$55 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" */
+            1'h1:
+                web = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+          casez (\$57 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" */
+            1'h1:
+                web = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+          casez (\$59 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" */
+            1'h1:
+                web = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$61 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                web = 1'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+          casez (\$63 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" */
             1'h1:
                 web = 1'h1;
           endcase
@@ -852,462 +1028,580 @@ module ALU(load_wb, branching, jump, Ra, immediate, pc, Rb, reg_addr_in, inst_ty
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$1 ) begin end
     wmask = 4'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" *)
-    casez (\$57 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:76" */
-      1'h1:
-          wmask = 4'h0;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" *)
-    casez (\$59 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:92" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" *)
+    casez (\$65 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:81" */
       1'h1:
           wmask = 4'h0;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" *)
-    casez (\$61 )
+    casez (\$67 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:102" */
       1'h1:
           wmask = 4'h0;
     endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" *)
-    casez (\$63 )
+    casez (\$69 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:112" */
       1'h1:
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" *)
-          casez (\$65 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:118" */
+          wmask = 4'h0;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" *)
+    casez (\$71 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:122" */
+      1'h1:
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" *)
+          casez (\$73 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:128" */
             1'h1:
                 wmask = 4'hf;
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" *)
-    casez (\$67 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:123" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" *)
+    casez (\$75 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:133" */
       1'h1:
           wmask = 4'h0;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" *)
-    casez (\$69 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:145" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" *)
+    casez (\$77 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:159" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" *)
-          casez (\$71 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:148" */
-            1'h1:
-                wmask = 4'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" *)
-          casez (\$73 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:154" */
-            1'h1:
-                wmask = 4'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" *)
-          casez (\$75 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:160" */
-            1'h1:
-                wmask = 4'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" *)
-          casez (\$77 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:166" */
-            1'h1:
-                wmask = 4'h0;
-          endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" *)
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" *)
           casez (\$79 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:172" */
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:162" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" *)
+          casez (\$81 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:168" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" *)
+          casez (\$83 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:174" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" *)
+          casez (\$85 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:180" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" *)
+          casez (\$87 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:186" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" *)
+          casez (\$89 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:192" */
+            1'h1:
+                wmask = 4'h0;
+          endcase
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" *)
+          casez (\$91 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/alu.py:199" */
             1'h1:
                 wmask = 4'hf;
           endcase
         end
     endcase
   end
-  assign \$137  = \$138 ;
-  assign \$142  = \$143 ;
-  assign \$171  = \$172 ;
-  assign \$196  = \$197 ;
+  assign \$157  = \$158 ;
+  assign \$162  = \$163 ;
+  assign \$169  = \$170 ;
+  assign \$200  = \$201 ;
   assign \$213  = \$214 ;
-  assign \$218  = \$219 ;
+  assign \$232  = \$233 ;
+  assign \$253  = \$254 ;
+  assign \$262  = \$263 ;
   assign shamt1 = Rb[4:0];
   assign reg_addr_out = reg_addr_in;
   assign inst_type3_out = inst_type3;
   assign inst_type2_out = inst_type2;
   assign inst_type1_out = inst_type1;
   assign inst_type_out = inst_type;
-  assign \$197  = \$219 ;
-  assign \$186  = \$190 ;
-  assign \$172  = \$219 ;
-  assign \$169  = \$223 ;
-  assign \$167  = \$221 ;
-  assign \$158  = \$206 ;
-  assign \$131  = \$216 ;
-  assign \$129  = \$211 ;
-  assign \$127  = \$203 ;
-  assign \$125  = \$199 ;
-  assign \$123  = \$194 ;
-  assign \$121  = \$192 ;
-  assign \$119  = \$174 ;
-  assign \$117  = \$221 ;
-  assign \$115  = \$163 ;
-  assign \$113  = \$153 ;
-  assign \$111  = \$133 ;
-  assign \$109  = \$192 ;
-  assign \$107  = \$190 ;
-  assign \$105  = \$188 ;
-  assign \$103  = \$190 ;
-  assign \$101  = \$184 ;
-  assign \$99  = \$182 ;
-  assign \$97  = \$180 ;
-  assign \$95  = \$178 ;
-  assign \$93  = \$176 ;
-  assign \$91  = \$174 ;
-  assign \$89  = \$221 ;
-  assign \$87  = \$163 ;
-  assign \$85  = \$155 ;
-  assign \$83  = \$153 ;
-  assign \$81  = \$133 ;
-  assign \$79  = \$216 ;
-  assign \$77  = \$211 ;
+  assign \$256  = \$273 ;
+  assign \$233  = \$263 ;
+  assign \$228  = \$271 ;
+  assign \$222  = \$226 ;
+  assign \$214  = \$263 ;
+  assign \$201  = \$263 ;
+  assign \$198  = \$277 ;
+  assign \$196  = \$275 ;
+  assign \$187  = \$246 ;
+  assign \$167  = \$269 ;
+  assign \$165  = \$267 ;
+  assign \$153  = \$265 ;
+  assign \$151  = \$260 ;
+  assign \$149  = \$273 ;
+  assign \$147  = \$251 ;
+  assign \$145  = \$243 ;
+  assign \$143  = \$239 ;
+  assign \$141  = \$235 ;
+  assign \$139  = \$230 ;
+  assign \$137  = \$271 ;
+  assign \$135  = \$203 ;
+  assign \$133  = \$275 ;
+  assign \$131  = \$192 ;
+  assign \$129  = \$182 ;
+  assign \$127  = \$265 ;
+  assign \$125  = \$271 ;
+  assign \$123  = \$226 ;
+  assign \$121  = \$224 ;
+  assign \$119  = \$226 ;
+  assign \$117  = \$220 ;
+  assign \$115  = \$218 ;
+  assign \$113  = \$216 ;
+  assign \$111  = \$211 ;
+  assign \$109  = \$209 ;
+  assign \$107  = \$207 ;
+  assign \$105  = \$205 ;
+  assign \$103  = \$203 ;
+  assign \$101  = \$275 ;
+  assign \$99  = \$192 ;
+  assign \$97  = \$184 ;
+  assign \$95  = \$182 ;
+  assign \$93  = \$265 ;
+  assign \$91  = \$260 ;
+  assign \$89  = \$273 ;
+  assign \$87  = \$251 ;
+  assign \$85  = \$243 ;
+  assign \$83  = \$239 ;
+  assign \$81  = \$235 ;
+  assign \$79  = \$230 ;
+  assign \$77  = \$271 ;
   assign \$75  = \$203 ;
-  assign \$73  = \$199 ;
-  assign \$71  = \$194 ;
+  assign \$73  = \$277 ;
+  assign \$71  = \$275 ;
   assign \$69  = \$192 ;
-  assign \$67  = \$174 ;
-  assign \$65  = \$223 ;
-  assign \$63  = \$221 ;
-  assign \$61  = \$163 ;
-  assign \$59  = \$153 ;
-  assign \$57  = \$133 ;
-  assign \$55  = \$216 ;
-  assign \$53  = \$211 ;
-  assign \$51  = \$203 ;
-  assign \$49  = \$199 ;
-  assign \$47  = \$194 ;
-  assign \$45  = \$192 ;
-  assign \$43  = \$174 ;
-  assign \$41  = \$221 ;
-  assign \$39  = \$163 ;
-  assign \$37  = \$153 ;
-  assign \$35  = \$133 ;
-  assign \$33  = \$216 ;
-  assign \$31  = \$211 ;
-  assign \$29  = \$203 ;
-  assign \$27  = \$199 ;
-  assign \$25  = \$194 ;
-  assign \$23  = \$192 ;
-  assign \$21  = \$174 ;
-  assign \$19  = \$221 ;
-  assign \$17  = \$163 ;
-  assign \$15  = \$153 ;
-  assign \$13  = \$133 ;
-  assign \$11  = \$192 ;
-  assign \$9  = \$174 ;
-  assign \$7  = \$221 ;
-  assign \$5  = \$163 ;
-  assign \$3  = \$153 ;
-  assign \$1  = \$133 ;
-  assign \$160  = \$208 ;
-  assign \$157  = \$205 ;
+  assign \$67  = \$182 ;
+  assign \$65  = \$265 ;
+  assign \$63  = \$260 ;
+  assign \$61  = \$273 ;
+  assign \$59  = \$251 ;
+  assign \$57  = \$243 ;
+  assign \$55  = \$239 ;
+  assign \$53  = \$235 ;
+  assign \$51  = \$230 ;
+  assign \$49  = \$271 ;
+  assign \$47  = \$203 ;
+  assign \$45  = \$275 ;
+  assign \$43  = \$192 ;
+  assign \$41  = \$182 ;
+  assign \$39  = \$265 ;
+  assign \$37  = \$260 ;
+  assign \$35  = \$273 ;
+  assign \$33  = \$251 ;
+  assign \$31  = \$243 ;
+  assign \$29  = \$239 ;
+  assign \$27  = \$235 ;
+  assign \$25  = \$230 ;
+  assign \$23  = \$271 ;
+  assign \$21  = \$203 ;
+  assign \$19  = \$275 ;
+  assign \$17  = \$192 ;
+  assign \$15  = \$182 ;
+  assign \$13  = \$265 ;
+  assign \$11  = \$271 ;
+  assign \$9  = \$203 ;
+  assign \$7  = \$275 ;
+  assign \$5  = \$192 ;
+  assign \$3  = \$182 ;
+  assign \$1  = \$265 ;
+  assign \$248  = \$189 ;
+  assign \$186  = \$245 ;
 endmodule
 
 (* \amaranth.hierarchy  = "top.ID" *)
 (* generator = "Amaranth" *)
 module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signextended_immediate, instruction_type, it0, it1, it2, it3, ifload, shamt, instruction);
   reg \$auto$verilog_backend.cc:2184:dump_module$2  = 0;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:58" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:63" *)
   wire [10:0] \$1 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$101 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$103 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$105 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$107 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$109 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$11 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$111 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$113 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$115 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$117 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$119 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$121 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$123 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$125 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$127 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$129 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$13 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$131 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$133 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$135 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$137 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$139 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$141 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$143 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$145 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$147 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$149 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$15 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$151 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$153 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$155 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
   wire \$157 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
   wire \$159 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$161 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$163 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$165 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$167 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$169 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$17 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$171 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$173 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$175 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$177 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$179 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$181 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$183 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$185 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$187 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$189 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$19 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$191 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$193 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$195 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$197 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$199 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$201 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:71" *)
-  wire [34:0] \$203 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:71" *)
-  wire [34:0] \$204 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
-  wire \$206 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:76" *)
-  wire [31:0] \$208 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$203 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$205 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$207 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$209 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$21 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-  wire \$210 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-  wire \$212 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
-  wire \$214 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:83" *)
-  wire [31:0] \$216 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$218 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$220 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$222 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$224 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$226 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$228 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$211 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$213 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$215 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$217 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$219 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$221 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$223 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$225 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$227 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$229 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$23 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$230 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-  wire \$232 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:88" *)
-  wire \$234 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:89" *)
-  wire [31:0] \$236 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$238 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$240 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$242 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$244 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$246 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$248 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+  wire \$231 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+  wire \$233 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+  wire \$235 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
+  wire \$237 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$239 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$241 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$243 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$245 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$247 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$249 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$25 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
-  wire \$250 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:100" *)
-  wire [31:0] \$252 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-  wire \$254 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-  wire \$256 ;
+  wire \$251 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$253 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
-  wire \$258 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:109" *)
-  wire [31:0] \$260 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-  wire \$262 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-  wire \$264 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:116" *)
-  wire \$266 ;
+  wire \$255 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$257 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$259 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$261 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
-  wire [31:0] \$268 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  wire \$263 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+  wire \$265 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+  wire \$267 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+  wire \$269 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
   wire \$27 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:118" *)
-  wire \$270 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$272 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:76" *)
+  wire [34:0] \$271 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:76" *)
+  wire [34:0] \$272 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
   wire \$274 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-  wire \$276 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:81" *)
+  wire [31:0] \$276 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$278 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$280 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:87" *)
   wire \$282 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-  wire \$284 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:88" *)
+  wire [31:0] \$284 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$286 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$288 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
   wire \$29 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$290 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$292 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$294 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$296 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$298 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$3 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$300 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$302 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+  wire \$304 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:93" *)
+  wire \$306 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  wire [31:0] \$308 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
   wire \$31 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$310 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$312 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$314 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$316 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$318 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$320 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$322 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$324 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:104" *)
+  wire \$326 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:105" *)
+  wire [31:0] \$328 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$33 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$330 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$332 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$334 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$336 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:113" *)
+  wire \$338 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:114" *)
+  wire [31:0] \$340 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+  wire \$342 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+  wire \$344 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:121" *)
+  wire \$346 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:122" *)
+  wire [31:0] \$348 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
   wire \$35 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:123" *)
+  wire \$350 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$352 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$354 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$356 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$358 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$360 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$362 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$364 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+  wire \$366 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$368 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$37 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$370 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$372 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+  wire \$374 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+  wire \$376 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+  wire \$378 ;
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$39 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$41 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$43 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$45 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$47 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$49 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$5 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$51 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$53 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
   wire \$55 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$57 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$59 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$61 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$63 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$65 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$67 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$69 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$7 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
   wire \$71 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$73 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$75 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$77 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
   wire \$79 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
   wire \$81 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
   wire \$83 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$85 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$87 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$89 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$9 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$91 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$93 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$95 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$97 ;
-  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
+  (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
   wire \$99 ;
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:18" *)
   output [4:0] des;
@@ -1357,125 +1651,135 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:23" *)
   output [31:0] signextended_immediate;
   reg [31:0] signextended_immediate;
-  assign \$107  = \$103  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) \$105 ;
-  assign \$111  = \$107  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) \$109 ;
-  assign \$135  = \$131  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) \$133 ;
-  assign \$151  = \$147  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) \$149 ;
-  assign \$153  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) 10'h3e3;
-  assign \$155  = \$151  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) \$153 ;
-  assign \$157  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) 6'h33;
-  assign \$161  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) 11'h433;
-  assign \$163  = \$159  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) \$161 ;
-  assign \$165  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) 10'h333;
-  assign \$169  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) 10'h3b3;
-  assign \$179  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) 5'h13;
-  assign \$191  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *) 8'h93;
-  assign \$195  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *) 9'h103;
-  assign \$1  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:58" *) { instruction[14:12], instruction[6:0] };
-  assign \$199  = it3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 6'h37;
-  assign \$206  = it3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *) 7'h6f;
-  assign \$208  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:76" *) { 1'h0, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'h0 };
-  assign \$210  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *) 9'h123;
-  assign \$214  = ~ (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *) instruction[31];
-  assign \$216  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:83" *) { 1'h0, instruction[31:25], instruction[11:7] };
-  assign \$218  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) 7'h63;
-  assign \$222  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) 10'h263;
-  assign \$226  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) 10'h2e3;
-  assign \$236  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:89" *) { 2'h0, instruction[31], instruction[7], instruction[30:25], instruction[11:8], 1'h0 };
-  assign \$242  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) 10'h393;
-  assign \$246  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) 7'h67;
-  assign \$252  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:100" *) { 1'h0, instruction[31:20] };
-  assign \$75  = \$71  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *) \$73 ;
-  assign \$91  = \$87  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *) \$89 ;
+  assign \$99  = \$95  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) \$97 ;
+  assign \$103  = \$99  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) \$101 ;
+  assign \$119  = \$115  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) \$117 ;
+  assign \$123  = \$119  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) \$121 ;
+  assign \$131  = \$127  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) \$129 ;
+  assign \$139  = \$135  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) \$137 ;
+  assign \$1  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:63" *) { instruction[14:12], instruction[6:0] };
+  assign \$203  = \$199  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) \$201 ;
+  assign \$209  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 6'h33;
+  assign \$213  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 11'h433;
+  assign \$217  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 8'hb3;
+  assign \$221  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 10'h2b3;
+  assign \$225  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 10'h333;
+  assign \$229  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) 10'h3b3;
+  assign \$231  = \$227  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) \$229 ;
+  assign \$247  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) 10'h393;
+  assign \$251  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) 7'h67;
+  assign \$261  = \$257  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *) \$259 ;
+  assign \$263  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *) 9'h103;
+  assign \$267  = it3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *) 6'h37;
+  assign \$274  = it3 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *) 7'h6f;
+  assign \$276  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:81" *) { 1'h0, instruction[31], instruction[19:12], instruction[20], instruction[30:21], 1'h0 };
+  assign \$278  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *) 9'h123;
+  assign \$284  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:88" *) { 1'h0, instruction[31:25], instruction[11:7] };
+  assign \$286  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) 7'h63;
+  assign \$290  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) 8'he3;
+  assign \$294  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) 10'h263;
+  assign \$298  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) 10'h2e3;
+  assign \$302  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *) 10'h3e3;
+  assign \$306  = ~ (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:93" *) instruction[31];
+  assign \$308  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *) { 2'h0, instruction[31], instruction[7], instruction[30:25], instruction[11:8], 1'h0 };
+  assign \$310  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) 5'h13;
+  assign \$314  = it2 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) 10'h313;
+  assign \$324  = \$320  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) \$322 ;
+  assign \$328  = + (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:105" *) { 1'h0, instruction[31:20] };
+  assign \$330  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *) 8'h93;
+  assign \$334  = it1 == (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *) 10'h293;
+  assign \$67  = \$63  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *) \$65 ;
+  assign \$91  = \$87  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) \$89 ;
+  assign \$95  = \$91  | (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *) \$93 ;
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     signextended_immediate = 32'd0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
-    casez (\$201 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+    casez (\$269 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" */
       1'h1:
-          signextended_immediate = \$204 [31:0];
+          signextended_immediate = \$272 [31:0];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
-    casez (\$206 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
+    casez (\$274 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" */
       1'h1:
-          signextended_immediate = \$208 ;
+          signextended_immediate = \$276 ;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-    casez (\$212 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
+    casez (\$280 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
-          casez (\$214 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:87" *)
+          casez (\$282 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:87" */
             1'h1:
-                signextended_immediate = \$216 ;
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:84" */
+                signextended_immediate = \$284 ;
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:89" */
             default:
                 signextended_immediate = { 20'hfffff, instruction[31:25], instruction[11:7] };
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-    casez (\$232 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+    casez (\$304 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:88" *)
-          casez (\$234 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:88" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:93" *)
+          casez (\$306 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:93" */
             1'h1:
-                signextended_immediate = \$236 ;
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:90" */
+                signextended_immediate = \$308 ;
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:95" */
             default:
                 signextended_immediate = { 19'h7ffff, instruction[31], instruction[7], instruction[30:25], instruction[11:8], 1'h0 };
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-    casez (\$248 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+    casez (\$324 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
-          casez (\$250 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:104" *)
+          casez (\$326 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:104" */
             1'h1:
-                signextended_immediate = \$252 ;
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:101" */
+                signextended_immediate = \$328 ;
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:106" */
             default:
                 signextended_immediate = { 20'hfffff, instruction[31:20] };
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-    casez (\$256 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+    casez (\$336 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
       1'h1:
           (* full_case = 32'd1 *)
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
-          casez (\$258 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:113" *)
+          casez (\$338 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:113" */
             1'h1:
-                signextended_immediate = \$260 ;
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:110" */
+                signextended_immediate = \$340 ;
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:115" */
             default:
                 signextended_immediate = { 20'hfffff, instruction[31:20] };
           endcase
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-    casez (\$264 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+    casez (\$344 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" */
       1'h1:
         begin
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:116" *)
-          casez (\$266 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:116" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:121" *)
+          casez (\$346 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:121" */
             1'h1:
-                signextended_immediate = \$268 ;
+                signextended_immediate = \$348 ;
           endcase
-          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:118" *)
-          casez (\$270 )
-            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:118" */
+          (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:123" *)
+          casez (\$350 )
+            /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:123" */
             1'h1:
                 signextended_immediate = { 20'hfffff, instruction[31:20] };
           endcase
@@ -1485,15 +1789,15 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     shamt = 5'h00;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-    casez (\$282 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+    casez (\$366 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
       1'h1:
           shamt = instruction[24:20];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-    casez (\$286 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+    casez (\$374 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
       1'h1:
           shamt = instruction[24:20];
     endcase
@@ -1501,9 +1805,9 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     ifload = 1'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-    casez (\$290 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+    casez (\$378 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" */
       1'h1:
           ifload = 1'h1;
     endcase
@@ -1511,51 +1815,51 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     instruction_type = 3'h0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
-    casez (\$17 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+    casez (\$25 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
       1'h1:
           instruction_type = 3'h7;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
-    casez (\$21 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+    casez (\$29 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" */
       1'h1:
           instruction_type = 3'h5;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
-    casez (\$23 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
+    casez (\$31 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" */
       1'h1:
           instruction_type = 3'h6;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-    casez (\$27 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
+    casez (\$35 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" */
       1'h1:
           instruction_type = 3'h3;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-    casez (\$43 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+    casez (\$55 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" */
       1'h1:
           instruction_type = 3'h4;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-    casez (\$55 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+    casez (\$71 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
       1'h1:
           instruction_type = 3'h1;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-    casez (\$59 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+    casez (\$79 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
       1'h1:
           instruction_type = 3'h1;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-    casez (\$63 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+    casez (\$83 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" */
       1'h1:
           instruction_type = 3'h1;
     endcase
@@ -1563,39 +1867,39 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     s1data_out = 32'd0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
-    casez (\$79 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+    casez (\$107 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
       1'h1:
           s1data_out = s1_data_in;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-    casez (\$83 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" */
-      1'h1:
-          s1data_out = s1_data_in;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-    casez (\$99 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" */
-      1'h1:
-          s1data_out = s1_data_in;
-    endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
     casez (\$111 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" */
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" */
       1'h1:
           s1data_out = s1_data_in;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-    casez (\$115 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+    casez (\$131 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" */
       1'h1:
           s1data_out = s1_data_in;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-    casez (\$119 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+    casez (\$147 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
+      1'h1:
+          s1data_out = s1_data_in;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+    casez (\$155 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
+      1'h1:
+          s1data_out = s1_data_in;
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+    casez (\$159 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" */
       1'h1:
           s1data_out = s1_data_in;
     endcase
@@ -1603,21 +1907,21 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     s2data_out = 32'd0;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
-    casez (\$135 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
+    casez (\$183 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
       1'h1:
           s2data_out = s2_data_in;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" *)
-    casez (\$139 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:77" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" *)
+    casez (\$187 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:82" */
       1'h1:
           s2data_out = s2_data_in;
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" *)
-    casez (\$155 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:86" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" *)
+    casez (\$207 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:91" */
       1'h1:
           s2data_out = s2_data_in;
     endcase
@@ -1625,44 +1929,44 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   always @* begin
     if (\$auto$verilog_backend.cc:2184:dump_module$2 ) begin end
     des = 5'h00;
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" *)
-    casez (\$171 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:64" */
-      1'h1:
-          des = instruction[11:7];
-    endcase
     (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" *)
-    casez (\$175 )
+    casez (\$231 )
       /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:69" */
       1'h1:
           des = instruction[11:7];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" *)
-    casez (\$177 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:73" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" *)
+    casez (\$235 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:74" */
       1'h1:
           des = instruction[11:7];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" *)
-    casez (\$189 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:94" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" *)
+    casez (\$237 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:78" */
       1'h1:
           des = instruction[11:7];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" *)
-    casez (\$193 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:103" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" *)
+    casez (\$253 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:99" */
       1'h1:
           des = instruction[11:7];
     endcase
-    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" *)
-    casez (\$197 )
-      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:112" */
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" *)
+    casez (\$261 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:108" */
+      1'h1:
+          des = instruction[11:7];
+    endcase
+    (* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" *)
+    casez (\$265 )
+      /* src = "/home/ubuntu/Chipcron-core-generator/all_stages/id.py:117" */
       1'h1:
           des = instruction[11:7];
     endcase
   end
-  assign \$203  = \$204 ;
+  assign \$271  = \$272 ;
   assign s2 = instruction[24:20];
   assign s1 = instruction[19:15];
   assign it0 = { instruction[31:25], instruction[14:12], instruction[6:0] };
@@ -1670,120 +1974,154 @@ module ID(s1, s2, s1_data_in, s2_data_in, des, s1data_out, s2data_out, signexten
   assign it2 = \$1 ;
   assign it3 = instruction[6:0];
   assign \$5  = \$3 ;
-  assign \$21  = \$19 ;
-  assign \$27  = \$25 ;
-  assign \$31  = \$29 ;
-  assign \$47  = \$45 ;
+  assign \$29  = \$27 ;
+  assign \$35  = \$33 ;
+  assign \$39  = \$37 ;
   assign \$59  = \$57 ;
-  assign \$63  = \$61 ;
-  assign \$67  = \$65 ;
+  assign \$75  = \$73 ;
   assign \$83  = \$81 ;
   assign \$87  = \$85 ;
-  assign \$103  = \$101 ;
+  assign \$111  = \$109 ;
   assign \$115  = \$113 ;
-  assign \$119  = \$117 ;
-  assign \$123  = \$121 ;
-  assign \$139  = \$137 ;
-  assign \$143  = \$141 ;
+  assign \$135  = \$133 ;
+  assign \$151  = \$149 ;
   assign \$159  = \$157 ;
-  assign \$175  = \$173 ;
-  assign \$181  = \$179 ;
-  assign \$193  = \$191 ;
-  assign \$197  = \$195 ;
-  assign \$201  = \$199 ;
-  assign \$204  = { 3'h0, instruction[31:12], 12'h000 };
-  assign \$212  = \$210 ;
-  assign \$220  = \$218 ;
-  assign \$240  = \$238 ;
-  assign \$256  = \$254 ;
-  assign \$264  = \$262 ;
-  assign \$270  = instruction[31];
-  assign \$274  = \$272 ;
-  assign \$286  = \$284 ;
-  assign \$290  = \$288 ;
-  assign \$250  = \$214 ;
-  assign \$187  = \$246 ;
-  assign \$183  = \$242 ;
-  assign \$254  = \$191 ;
-  assign \$177  = \$206 ;
-  assign \$238  = \$179 ;
-  assign \$173  = \$199 ;
-  assign \$258  = \$214 ;
-  assign \$149  = \$226 ;
-  assign \$145  = \$222 ;
-  assign \$260  = \$252 ;
-  assign \$141  = \$218 ;
-  assign \$262  = \$195 ;
-  assign \$137  = \$210 ;
-  assign \$133  = \$169 ;
-  assign \$129  = \$165 ;
-  assign \$125  = \$161 ;
-  assign \$121  = \$157 ;
-  assign \$266  = \$214 ;
-  assign \$117  = \$195 ;
-  assign \$268  = \$252 ;
-  assign \$113  = \$191 ;
-  assign \$109  = \$246 ;
-  assign \$105  = \$242 ;
-  assign \$234  = \$214 ;
-  assign \$101  = \$179 ;
-  assign \$97  = \$153 ;
-  assign \$93  = \$226 ;
-  assign \$89  = \$222 ;
-  assign \$272  = \$179 ;
-  assign \$85  = \$218 ;
-  assign \$81  = \$210 ;
-  assign \$77  = \$169 ;
-  assign \$73  = \$165 ;
-  assign \$69  = \$161 ;
-  assign \$276  = \$242 ;
-  assign \$65  = \$157 ;
-  assign \$61  = \$195 ;
-  assign \$280  = \$246 ;
-  assign \$57  = \$191 ;
-  assign \$53  = \$246 ;
-  assign \$49  = \$242 ;
-  assign \$45  = \$179 ;
-  assign \$41  = \$153 ;
-  assign \$37  = \$226 ;
-  assign \$33  = \$222 ;
-  assign \$284  = \$191 ;
-  assign \$29  = \$218 ;
-  assign \$230  = \$153 ;
-  assign \$25  = \$210 ;
-  assign \$23  = \$206 ;
-  assign \$288  = \$195 ;
-  assign \$19  = \$199 ;
-  assign \$15  = \$169 ;
-  assign \$11  = \$165 ;
-  assign \$7  = \$161 ;
-  assign \$3  = \$157 ;
-  assign \$244  = \$107 ;
-  assign \$71  = \$163 ;
-  assign \$278  = \$107 ;
-  assign \$147  = \$91 ;
-  assign \$51  = \$107 ;
-  assign \$282  = \$111 ;
-  assign \$248  = \$111 ;
-  assign \$35  = \$91 ;
-  assign \$127  = \$163 ;
-  assign \$224  = \$91 ;
-  assign \$9  = \$163 ;
-  assign \$185  = \$107 ;
-  assign \$228  = \$95 ;
-  assign \$55  = \$111 ;
-  assign \$99  = \$232 ;
-  assign \$39  = \$151 ;
-  assign \$131  = \$75 ;
-  assign \$95  = \$151 ;
-  assign \$189  = \$111 ;
-  assign \$13  = \$75 ;
-  assign \$167  = \$75 ;
-  assign \$43  = \$155 ;
-  assign \$232  = \$155 ;
-  assign \$79  = \$135 ;
-  assign \$17  = \$135 ;
-  assign \$171  = \$135 ;
+  assign \$163  = \$161 ;
+  assign \$187  = \$185 ;
+  assign \$191  = \$189 ;
+  assign \$211  = \$209 ;
+  assign \$235  = \$233 ;
+  assign \$241  = \$239 ;
+  assign \$257  = \$255 ;
+  assign \$265  = \$263 ;
+  assign \$269  = \$267 ;
+  assign \$272  = { 3'h0, instruction[31:12], 12'h000 };
+  assign \$280  = \$278 ;
+  assign \$288  = \$286 ;
+  assign \$312  = \$310 ;
+  assign \$332  = \$330 ;
+  assign \$344  = \$342 ;
+  assign \$350  = instruction[31];
+  assign \$354  = \$352 ;
+  assign \$370  = \$368 ;
+  assign \$378  = \$376 ;
+  assign \$282  = \$306 ;
+  assign \$326  = \$306 ;
+  assign \$338  = \$306 ;
+  assign \$259  = \$334 ;
+  assign \$340  = \$328 ;
+  assign \$255  = \$330 ;
+  assign \$243  = \$314 ;
+  assign \$342  = \$263 ;
+  assign \$239  = \$310 ;
+  assign \$237  = \$274 ;
+  assign \$233  = \$267 ;
+  assign \$346  = \$306 ;
+  assign \$205  = \$302 ;
+  assign \$201  = \$298 ;
+  assign \$197  = \$294 ;
+  assign \$193  = \$290 ;
+  assign \$348  = \$328 ;
+  assign \$189  = \$286 ;
+  assign \$322  = \$251 ;
+  assign \$185  = \$278 ;
+  assign \$181  = \$229 ;
+  assign \$177  = \$225 ;
+  assign \$173  = \$221 ;
+  assign \$169  = \$217 ;
+  assign \$165  = \$213 ;
+  assign \$352  = \$310 ;
+  assign \$161  = \$209 ;
+  assign \$157  = \$263 ;
+  assign \$153  = \$334 ;
+  assign \$356  = \$314 ;
+  assign \$149  = \$330 ;
+  assign \$145  = \$251 ;
+  assign \$141  = \$247 ;
+  assign \$137  = \$314 ;
+  assign \$133  = \$310 ;
+  assign \$129  = \$302 ;
+  assign \$125  = \$298 ;
+  assign \$121  = \$294 ;
+  assign \$117  = \$290 ;
+  assign \$360  = \$247 ;
+  assign \$113  = \$286 ;
+  assign \$109  = \$278 ;
+  assign \$105  = \$229 ;
+  assign \$101  = \$225 ;
+  assign \$97  = \$221 ;
+  assign \$93  = \$217 ;
+  assign \$89  = \$213 ;
+  assign \$364  = \$251 ;
+  assign \$85  = \$209 ;
+  assign \$81  = \$263 ;
+  assign \$77  = \$334 ;
+  assign \$368  = \$330 ;
+  assign \$73  = \$330 ;
+  assign \$69  = \$251 ;
+  assign \$65  = \$247 ;
+  assign \$61  = \$314 ;
+  assign \$318  = \$247 ;
+  assign \$57  = \$310 ;
+  assign \$53  = \$302 ;
+  assign \$49  = \$298 ;
+  assign \$45  = \$294 ;
+  assign \$41  = \$290 ;
+  assign \$372  = \$334 ;
+  assign \$37  = \$286 ;
+  assign \$374  = \$336 ;
+  assign \$33  = \$278 ;
+  assign \$31  = \$274 ;
+  assign \$376  = \$263 ;
+  assign \$27  = \$267 ;
+  assign \$23  = \$229 ;
+  assign \$19  = \$225 ;
+  assign \$15  = \$221 ;
+  assign \$11  = \$217 ;
+  assign \$7  = \$213 ;
+  assign \$316  = \$358 ;
+  assign \$3  = \$209 ;
+  assign \$155  = \$261 ;
+  assign \$358  = \$139 ;
+  assign \$245  = \$139 ;
+  assign \$362  = \$143 ;
+  assign \$366  = \$147 ;
+  assign \$215  = \$91 ;
+  assign \$79  = \$261 ;
+  assign \$292  = \$119 ;
+  assign \$63  = \$139 ;
+  assign \$195  = \$119 ;
+  assign \$43  = \$119 ;
+  assign \$336  = \$261 ;
+  assign \$9  = \$91 ;
+  assign \$167  = \$91 ;
+  assign \$296  = \$123 ;
+  assign \$219  = \$95 ;
+  assign \$199  = \$123 ;
+  assign \$143  = \$67 ;
+  assign \$47  = \$123 ;
+  assign \$249  = \$67 ;
+  assign \$171  = \$95 ;
+  assign \$13  = \$95 ;
+  assign \$320  = \$67 ;
+  assign \$223  = \$99 ;
+  assign \$253  = \$324 ;
+  assign \$147  = \$324 ;
+  assign \$71  = \$324 ;
+  assign \$51  = \$203 ;
+  assign \$127  = \$203 ;
+  assign \$300  = \$203 ;
+  assign \$175  = \$99 ;
+  assign \$17  = \$99 ;
+  assign \$304  = \$131 ;
+  assign \$207  = \$131 ;
+  assign \$55  = \$131 ;
+  assign \$179  = \$103 ;
+  assign \$227  = \$103 ;
+  assign \$21  = \$103 ;
+  assign \$107  = \$231 ;
+  assign \$183  = \$231 ;
+  assign \$25  = \$231 ;
 endmodule
 
 (* \amaranth.hierarchy  = "top.IF_ID_pipeline" *)
@@ -4136,7 +4474,7 @@ endmodule
 (* \amaranth.hierarchy  = "top" *)
 (* top =  1  *)
 (* generator = "Amaranth" *)
-module top(csb_alu, csb_mem, web, wmask, alu_result, gpio_pins, output_pins, inst_mem_addr, inst_mem_rdata, data_mem_addr, data_mem_wdata, data_mem_rdata, neg_clk, neg_rst, clk, rst, read_flag);
+module top(csb_alu, csb_mem, web, wmask, alu_result, gpio_pins, output_pins, inst_mem_addr, inst_mem_rdata, data_mem_addr, data_mem_wdata, data_mem_rdata, clk, rst, neg_clk, neg_rst, read_flag);
   reg \$auto$verilog_backend.cc:2184:dump_module$11  = 0;
   (* src = "/home/ubuntu/Chipcron-core-generator/Wrapper_class.py:68" *)
   wire \$1 ;
