@@ -119,4 +119,4 @@ Unmodified processor.v and testbench.v verilog run. This tests out the program l
 -- running simulator with -fst flag to compress the .vcd file
 ```
 ```
-![image](../../images/doorbell_run._fst.png)
+![image](../../images/doorbell_run_fst.png)
