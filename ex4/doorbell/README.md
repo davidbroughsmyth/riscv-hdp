@@ -108,3 +108,11 @@ sw
 ```
 #### Testing app via x30 GPIO bits 
 ![image](../../images/doorbell_test.png)
+
+### Verilog generation 
+
+![image](../../images/doorbell_verilog_run1.png)
+![image](../../images/doorbell_verilog_run2.png)
+
+-- running simulator with -fst flag to compress the .vcd file
+![image](../../images/doorbell_run._fstpng)
