@@ -107,13 +107,16 @@ mv
 sw
 ```
 #### Testing app via x30 GPIO bits 
-Unmodified processor.v and testbench.v verilog run. This tests out the program loading from the uart.
 ![image](../../images/doorbell_test.png)
 
-### Verilog generation 
-
+#### Verilog generation 
+Unmodified processor.v and testbench.v verilog run. This tests out the program loading from the uart.
+```
+```
 ![image](../../images/doorbell_verilog_run1.png)
 ![image](../../images/doorbell_verilog_run2.png)
 
 -- running simulator with -fst flag to compress the .vcd file
+```
+```
 ![image](../../images/doorbell_run._fst.png)
