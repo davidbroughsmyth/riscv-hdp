@@ -116,7 +116,7 @@ Unmodified ChipCron processor.v and testbench.v doing a verilog run. This tests 
 ![image](../../images/doorbell_verilog_run1.png)
 ![image](../../images/doorbell_verilog_run2.png)
 
--- running simulator with -fst flag to compress the .vcd file as the native waveform can get very large. A smaller .vcd helps gtkwave to load faster. 
+-- running simulator with -fst flag to compress the .vcd file as the native file waveform can get very large. A smaller .vcd helps gtkwave to load faster. 
 ```
 ```
 ![image](../../images/doorbell_run_fst.png)
