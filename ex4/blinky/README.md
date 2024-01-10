@@ -1,5 +1,5 @@
 ### Blinky IOT
-Display a pattern on 16 leds. The pattern changes when the display waveform button is pressed.
+Display a pattern on 16 leds. The pattern changes when the waveform mode button is pressed, which emits a pulse via a external pulse circuit. The code allows only a change in pattern when the button signal goes from low to high. The pattern repeats continuously until the button is pressed or the circuit is reset, then it  begins the pattern again.
 
 #### Block Diagram
 ![image](../../images/blinky_bd.png)
