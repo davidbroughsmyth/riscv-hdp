@@ -10,14 +10,14 @@ Secure code doorlock with tamper proof door locking/unlocking. Inputs are 1. tam
 #### x30 GPIO allocation
 Output:
 
-x30[0] - lock led
-x30[1] - lock/unlock audio beep
-x30[3] - doorlock solenoid enable/disable
+1 x30[0] - lock led
+1.x30[1] - lock/unlock audio beep
+1.x30[3] - doorlock solenoid enable/disable
 
 Input:
 
-x30[31] - tamper switch
-x30[8:4] - keypad code 
+1.x30[31] - tamper switch
+1.x30[8:4] - keypad code 
 
 #### C code
 1. doorlock_test.c - app for testing the GPIO x30 registor
