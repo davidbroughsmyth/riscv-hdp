@@ -1,0 +1,2 @@
+riscv64-unknown-elf-gcc -o blinky_test blinky_test.c
+spike pk blinky_test
