@@ -1,0 +1,4 @@
+riscv64-unknown-elf-gcc -o doorbell_test doorbell_test.c
+spike pk doorbell_test
+riscv64-unknown-elf-gcc -mabi=ilp32 -march=rv32i -ffreestanding -nostdlib -o doorbell.o doorbell.c
+riscv64-unknown-elf-objdump -d -r doorbell.o > doorbell_assembly.txt
