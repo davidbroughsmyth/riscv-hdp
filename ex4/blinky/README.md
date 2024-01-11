@@ -18,7 +18,7 @@ x30[31] - toggle mode button: pulse length 100ms
 
 #### C code
 1. blinky_test.c - app for testing the GPIO x30 registor
-1. blinky.c - stripped for verilog generation
+1. blinky.c - stripped for verilog generation when not adding the -DTESTGPIO flag to the c compiler
 
 -- blinky test
 ``` C
