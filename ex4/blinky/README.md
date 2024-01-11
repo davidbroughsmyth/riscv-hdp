@@ -133,7 +133,7 @@ void setButton(int GPIO_button_bit) {
 }
 
 ```
--- blinky for verilog, pass -DTESTGPIO via c compiler to enable/disable testing
+-- blinky for verilog, does not pass -DTESTGPIO to c compiler removing add testing code
 ``` C
 #ifdef TESTGPIO
 #include <stdio.h>
