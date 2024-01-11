@@ -1,19 +1,26 @@
+#ifdef TESTGPIO
 #include <stdio.h>
 #include <stdlib.h>
+#endif
 
 // GPIO bits
 const int ON = 1;
 const int OFF = 0;
 const int LED_MASK = 0xFFFF; // Mask for LED bits (x30[15:0])
+
+#ifdef TESTGPIO
 // Test: set button state (x30[31])
 const int BUTTON_ON = 0x80000000;  // x30[31] =1
 const int BUTTON_OFF = 0x00000000; // x30[31] =0
+#endif
 
 // Function prototypes
 void setLEDs(int led_pattern);
 int readButton();
+#ifdef TESTGPIO
 // test: set button state
 void setButton(int GPIO_button_bit);
+#endif
 
 int main() {
   int button_state = 0;
@@ -22,9 +29,11 @@ int main() {
   int current_pattern_set = 0; // Start with pattern set 0
   int i;                       // Loop counter
   int seconds = 1;             // Delay time
+#ifdef TESTGPIO
   // test
   int x30_value = 0x00000000;
   int set_button_state = 0;
+#endif
 
   int patterns_set1[] = {0x0001, 0x0003, 0x0007, 0x000F,
                          0x001F, 0x003F, 0x007F, 0x00FF};
@@ -34,8 +43,10 @@ int main() {
 
   while (1) {
     button_state = readButton();
+#ifdef TESTGPIO
     // Test: Read the current value of x30 register (button state)
     printf("Read Button: %d\n", button_state);
+#endif
 
     // Check for low-to-high transition
     if (button_state == ON && previous_button_state == OFF) {
@@ -50,9 +61,11 @@ int main() {
     previous_button_state = button_state;
 
     setLEDs(current_patterns[current_pattern]);
+#ifdef TESTGPIO
     // Test: Read the current value of x30 register (LED pattern)
     asm volatile("addi %0, x30, 0\n\t" : "=r"(x30_value) : :); // read x30
     printf("Current state of x30 register = %x\n\n", x30_value);
+#endif
 
     current_pattern = (current_pattern + 1) %
                       (sizeof(current_patterns)); // Advance pattern index
@@ -62,6 +75,7 @@ int main() {
       asm volatile("nop");
     }
 
+#ifdef TESTGPIO
     // Test: Randomly set the button state (x30[31])
     set_button_state = random() % 2;
     printf("Button state: %d\n", set_button_state);
@@ -70,6 +84,7 @@ int main() {
     } else {
       setButton(BUTTON_OFF);
     }
+#endif
   }
 
   return 0;
@@ -105,6 +120,7 @@ int readButton() {
   return button_press;
 }
 
+#ifdef TESTGPIO
 // Test: Set the button state
 void setButton(int GPIO_button_bit) {
   int mask = 0x7FFFFFFF; // preserve all bits except x30[31] - set to 0
@@ -115,3 +131,4 @@ void setButton(int GPIO_button_bit) {
                : "x30" // clobber list,indicating that x30 is modified
   );
 }
+#endif

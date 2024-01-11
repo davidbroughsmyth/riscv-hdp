@@ -1,0 +1,20 @@
+Number of different instructions: 19
+nop
+blt
+li
+or
+ret
+sra
+sw
+sll
+add
+lw
+and
+mv
+bnez
+bne
+sub
+lui
+srl
+j
+jal

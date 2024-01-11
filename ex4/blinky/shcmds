@@ -1,2 +1,5 @@
 riscv64-unknown-elf-gcc -o blinky_test blinky_test.c
 spike pk blinky_test
+riscv64-unknown-elf-gcc -DTESTGPIO -o blinky blinky.c
+riscv64-unknown-elf-gcc -mabi=ilp32 -march=rv32i -ffreestanding -nostdlib -o blinky.o blinky.c
+riscv64-unknown-elf-objdump -d -r blinky.o > blinky_assembly.txt
