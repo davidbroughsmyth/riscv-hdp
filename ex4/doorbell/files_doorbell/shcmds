@@ -1,0 +1,2 @@
+iverilog -o doorbell_v testbench.v  processor.v
+vvp doorbell_v
