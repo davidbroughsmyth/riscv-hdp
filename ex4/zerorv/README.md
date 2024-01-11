@@ -144,4 +144,4 @@ gtkwave.vcd waveform.vcd
 ![image](../../images/noprv_gtkwave.png)
 
 ---
-The objective for this exercise is complete and I wont be continuing further
+The objective for this exercise is complete. I wont be continuing it further.
