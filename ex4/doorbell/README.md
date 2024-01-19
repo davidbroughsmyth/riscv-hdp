@@ -87,24 +87,26 @@ int readButton() {
 
 #### Instructions used
 ```
+Total Number of instructions    : 64
+Chipcron pc_bit_width config    : 7
 Number of different instructions: 16
 List of unique instructions:
-ret
-sll
-blt
-jal
-lw
-sub
-add
-bne
-srl
 or
-and
-j
-li
-nop
+bne
 mv
+blt
+srl
 sw
+sll
+lw
+ret
+li
+j
+nop
+sub
+jal
+and
+add
 ```
 #### Testing app via x30 GPIO bits 
 ![image](../../images/doorbell_test.png)
