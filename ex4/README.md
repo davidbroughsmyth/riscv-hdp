@@ -14,7 +14,7 @@
 
 
 #### Utility programs
-*cpusage.py* extracts and displays the unique assembly inctructions from a assembly file
+*cpusage.py* extracts and displays the unique assembly inctructions from a assembly file, the lines of code and calculates the pc_bit_width for Chipcron verilog generation
 ```
 python3 cpusage.py -h
 cpusage.py -i <inputfile> -o <outputfile>
