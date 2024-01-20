@@ -114,11 +114,14 @@ add
 #### Verilog generation 
 Unmodified ChipCron processor.v and testbench.v doing a verilog run. This tests out the doorbell program loading from the uart.
 ```
+iverilog -o doorbell_v testbench.v  processor.v
+vvp doorbell_v
 ```
 ![image](../../images/doorbell_verilog_run1.png)
 ![image](../../images/doorbell_verilog_run2.png)
 
 -- running simulator with -fst flag to compress the .vcd file as the native file waveform can get very large. A smaller .vcd helps gtkwave to load faster. 
 ```
+vvp doorbell_v -fst
 ```
 ![image](../../images/doorbell_run_fst.png)
