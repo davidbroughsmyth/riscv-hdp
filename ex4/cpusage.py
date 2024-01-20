@@ -1,9 +1,11 @@
 import sys, getopt
+import math
 
 def main(argv):
    inputfile = ''
    outputfile = ''
    count = False
+   line_count = 0
    
    try:
       opts, args = getopt.getopt(argv,"hci:o:",["ifile=","ofile="])
@@ -34,15 +36,19 @@ def main(argv):
           if len(parts) >= 3:
              instruction = parts[2]
              unique_instructions.add(instruction)
+             line_count += 1
 
    if outputfile != "":
       with open(outputfile, 'w') as file:
            if count == True:
+               file.write(f"Total Number of instructions    : {line_count}" + "\n")
                file.write(f"Number of different instructions: {len(unique_instructions)}" + "\n")
            for instruction in unique_instructions:
                file.write(instruction + "\n")
    else:
      if count == True:
+	     print(f"Total Number of instructions    : {line_count}")
+	     print(f"Chipcron pc_bit_width config    : {math.ceil(math.log2(line_count+4))}")
 	     print(f"Number of different instructions: {len(unique_instructions)}")
 	     print("List of unique instructions:")
      for instruction in unique_instructions:
