@@ -1,8 +1,8 @@
 
 
-// 
+//
 // Module: tb
-// 
+//
 // Notes:
 // - Top level simulation testbench.
 //
@@ -11,11 +11,11 @@
 //`define WAVES_FILE "./work/waves-rx.vcd"
 
 module tb();
-    
+
 reg        clk          ; // Top level system clock input.
 reg rst;
-reg neg_clk; 
-reg neg_rst ; 
+reg neg_clk;
+reg neg_rst ;
 reg        resetn       ;
 reg        uart_rxd     ; // UART Recieve pin.
 
@@ -24,11 +24,11 @@ reg        uart_rx_en   ; // Recieve enable
 wire       uart_rx_break; // Did we get a BREAK message?
 wire       uart_rx_valid; // Valid data recieved and available.
 wire [7:0] uart_rx_data ; // The recieved data.
-wire [31:0] inst ; 
-wire [31:0] inst_mem ; 
+wire [31:0] inst ;
+wire [31:0] inst_mem ;
 
-reg rst_pin ; 
-wire write_done ; 
+reg rst_pin ;
+wire write_done ;
 
 
 // Bit rate of the UART line we are testing.
@@ -44,8 +44,8 @@ reg slow_clk = 0;
 
 
 // Make the clock tick.
-always begin #(CLK_P/2) clk  = ~clk; end   
-always begin #(CLK_P/2) neg_clk  = ~neg_clk; end     
+always begin #(CLK_P/2) clk  = ~clk; end
+always begin #(CLK_P/2) neg_clk  = ~neg_clk; end
 always begin #(CLK_P*2) slow_clk <= !slow_clk;end
 
 
@@ -59,11 +59,11 @@ task write_instruction;
             @(posedge clk);
             send_byte(instruction[15:8]);
             check_byte(instruction[15:8]);
-            
+
             @(posedge clk);
             send_byte(instruction[23:16]);
             check_byte(instruction[23:16]);
-            
+
             @(posedge clk);
             send_byte(instruction[31:24]);
             check_byte(instruction[31:24]);
@@ -94,12 +94,12 @@ task check_byte;
     begin
         if(uart_rx_data == expected_value) begin
             passes = passes + 1;
-            $display("%d/%d/%d [PASS] Expected %b and got %b", 
+            $display("%d/%d/%d [PASS] Expected %b and got %b",
                      passes,fails,passes+fails,
                      expected_value, uart_rx_data);
         end else begin
             fails  = fails  + 1;
-            $display("%d/%d/%d [FAIL] Expected %b and got %b", 
+            $display("%d/%d/%d [FAIL] Expected %b and got %b",
                      passes,fails,passes+fails,
                      expected_value, uart_rx_data);
         end
@@ -107,115 +107,118 @@ task check_byte;
 endtask
 
 
-initial 
-begin 
+initial
+begin
     $dumpfile("waveform.vcd");
     $dumpvars(0,tb);
-end 
+end
 
-reg [1:0] input_wires; 
-wire [1:0] output_wires ; 
-wire [2:0] pc ; 
+reg  input_wires;
+wire output_wires ;
+wire [2:0] pc ;
 
 
 reg [7:0] to_send;
 initial begin
     rst=1;
-    rst_pin=1; 
-    neg_rst = 1; 
+    rst_pin=1;
+    neg_rst = 1;
     resetn  = 1'b0;
     clk     = 1'b0;
-    neg_clk = 1; 
+    neg_clk = 1;
     neg_rst = ~clk ;
     uart_rxd = 1'b1;
-    neg_clk = 1'b1; 
-    input_wires = 4'b0111;
+    neg_clk = 1'b1;
+    input_wires = 1'b0;
     #4000
     resetn = 1'b1;
     rst=0;
-    neg_rst = 0; 
-    rst_pin = 0 ; 
-  
+    neg_rst = 0;
+    rst_pin = 0 ;
+
 
     uart_rx_en = 1'b1;
 /*
-    @(posedge slow_clk);write_instruction(32'h00000000); 
-    @(posedge slow_clk);write_instruction(32'h00000000); 
-    @(posedge slow_clk);write_instruction(32'hfe010113); 
-    @(posedge slow_clk);write_instruction(32'h00112e23); 
-    @(posedge slow_clk);write_instruction(32'h00812c23); 
-    @(posedge slow_clk);write_instruction(32'h02010413); 
-    @(posedge slow_clk);write_instruction(32'hfe042423); 
-    @(posedge slow_clk);write_instruction(32'h00100793); 
-    @(posedge slow_clk);write_instruction(32'hfef42223); 
-    @(posedge slow_clk);write_instruction(32'h0b8000ef); 
-    @(posedge slow_clk);write_instruction(32'hfea42423); 
-    @(posedge slow_clk);write_instruction(32'h00100793); 
-    @(posedge slow_clk);write_instruction(32'hfe842703); 
-    @(posedge slow_clk);write_instruction(32'h00f71a63); 
-    @(posedge slow_clk);write_instruction(32'h00100793); 
-    @(posedge slow_clk);write_instruction(32'h00078513); 
-    @(posedge slow_clk);write_instruction(32'h064000ef); 
-    @(posedge slow_clk);write_instruction(32'h0100006f); 
-    @(posedge slow_clk);write_instruction(32'h00000793); 
-    @(posedge slow_clk);write_instruction(32'h00078513); 
-    @(posedge slow_clk);write_instruction(32'h054000ef); 
-    @(posedge slow_clk);write_instruction(32'hfe042623); 
-    @(posedge slow_clk);write_instruction(32'h0140006f); 
-    @(posedge slow_clk);write_instruction(32'h00000013); 
-    @(posedge slow_clk);write_instruction(32'hfec42783); 
-    @(posedge slow_clk);write_instruction(32'h00178793); 
-    @(posedge slow_clk);write_instruction(32'hfef42623); 
-    @(posedge slow_clk);write_instruction(32'hfe442683); 
-    @(posedge slow_clk);write_instruction(32'h00068713); 
-    @(posedge slow_clk);write_instruction(32'h00571793); 
-    @(posedge slow_clk);write_instruction(32'h00078713); 
-    @(posedge slow_clk);write_instruction(32'h40d70733); 
-    @(posedge slow_clk);write_instruction(32'h00671793); 
-    @(posedge slow_clk);write_instruction(32'h40e787b3); 
-    @(posedge slow_clk);write_instruction(32'h00379793); 
-    @(posedge slow_clk);write_instruction(32'h00d787b3); 
-    @(posedge slow_clk);write_instruction(32'h00679793); 
-    @(posedge slow_clk);write_instruction(32'h00078713); 
-    @(posedge slow_clk);write_instruction(32'hfec42783); 
-    @(posedge slow_clk);write_instruction(32'hfce7c0e3); 
-    @(posedge slow_clk);write_instruction(32'hf85ff06f); 
-    @(posedge slow_clk);write_instruction(32'hfd010113); 
-    @(posedge slow_clk);write_instruction(32'h02812623); 
-    @(posedge slow_clk);write_instruction(32'h03010413); 
-    @(posedge slow_clk);write_instruction(32'hfca42e23); 
-    @(posedge slow_clk);write_instruction(32'hffe00793); 
-    @(posedge slow_clk);write_instruction(32'hfef42623); 
-    @(posedge slow_clk);write_instruction(32'hfdc42783); 
-    @(posedge slow_clk);write_instruction(32'hfec42703); 
-    @(posedge slow_clk);write_instruction(32'h00ef7f33); 
-    @(posedge slow_clk);write_instruction(32'h00ff6f33); 
-    @(posedge slow_clk);write_instruction(32'h00000013); 
-    @(posedge slow_clk);write_instruction(32'h02c12403); 
-    @(posedge slow_clk);write_instruction(32'h03010113); 
-    @(posedge slow_clk);write_instruction(32'h00008067); 
-    @(posedge slow_clk);write_instruction(32'hfe010113); 
-    @(posedge slow_clk);write_instruction(32'h00812e23); 
-    @(posedge slow_clk);write_instruction(32'h02010413); 
-    @(posedge slow_clk);write_instruction(32'h01ff5513); 
-    @(posedge slow_clk);write_instruction(32'h00157793); 
-    @(posedge slow_clk);write_instruction(32'hfef42623); 
-    @(posedge slow_clk);write_instruction(32'hfec42783); 
-    @(posedge slow_clk);write_instruction(32'h00078513); 
-    @(posedge slow_clk);write_instruction(32'h01c12403); 
-    @(posedge slow_clk);write_instruction(32'h02010113); 
-    @(posedge slow_clk);write_instruction(32'h00008067); 
-    @(posedge slow_clk);write_instruction(32'hffffffff); 
-    @(posedge slow_clk);write_instruction(32'hffffffff); 
+    @(posedge slow_clk);write_instruction(32'h00000000);
+    @(posedge slow_clk);write_instruction(32'h00000000);
+    @(posedge slow_clk);write_instruction(32'hfe010113);
+    @(posedge slow_clk);write_instruction(32'h00112e23);
+    @(posedge slow_clk);write_instruction(32'h00812c23);
+    @(posedge slow_clk);write_instruction(32'h02010413);
+    @(posedge slow_clk);write_instruction(32'hfe042423);
+    @(posedge slow_clk);write_instruction(32'h00100793);
+    @(posedge slow_clk);write_instruction(32'hfef42223);
+    @(posedge slow_clk);write_instruction(32'h0b8000ef);
+    @(posedge slow_clk);write_instruction(32'hfea42423);
+    @(posedge slow_clk);write_instruction(32'h00100793);
+    @(posedge slow_clk);write_instruction(32'hfe842703);
+    @(posedge slow_clk);write_instruction(32'h00f71a63);
+    @(posedge slow_clk);write_instruction(32'h00100793);
+    @(posedge slow_clk);write_instruction(32'h00078513);
+    @(posedge slow_clk);write_instruction(32'h064000ef);
+    @(posedge slow_clk);write_instruction(32'h0100006f);
+    @(posedge slow_clk);write_instruction(32'h00000793);
+    @(posedge slow_clk);write_instruction(32'h00078513);
+    @(posedge slow_clk);write_instruction(32'h054000ef);
+    @(posedge slow_clk);write_instruction(32'hfe042623);
+    @(posedge slow_clk);write_instruction(32'h0140006f);
+    @(posedge slow_clk);write_instruction(32'h00000013);
+    @(posedge slow_clk);write_instruction(32'hfec42783);
+    @(posedge slow_clk);write_instruction(32'h00178793);
+    @(posedge slow_clk);write_instruction(32'hfef42623);
+    @(posedge slow_clk);write_instruction(32'hfe442683);
+    @(posedge slow_clk);write_instruction(32'h00068713);
+    @(posedge slow_clk);write_instruction(32'h00571793);
+    @(posedge slow_clk);write_instruction(32'h00078713);
+    @(posedge slow_clk);write_instruction(32'h40d70733);
+    @(posedge slow_clk);write_instruction(32'h00671793);
+    @(posedge slow_clk);write_instruction(32'h40e787b3);
+    @(posedge slow_clk);write_instruction(32'h00379793);
+    @(posedge slow_clk);write_instruction(32'h00d787b3);
+    @(posedge slow_clk);write_instruction(32'h00679793);
+    @(posedge slow_clk);write_instruction(32'h00078713);
+    @(posedge slow_clk);write_instruction(32'hfec42783);
+    @(posedge slow_clk);write_instruction(32'hfce7c0e3);
+    @(posedge slow_clk);write_instruction(32'hf85ff06f);
+    @(posedge slow_clk);write_instruction(32'hfd010113);
+    @(posedge slow_clk);write_instruction(32'h02812623);
+    @(posedge slow_clk);write_instruction(32'h03010413);
+    @(posedge slow_clk);write_instruction(32'hfca42e23);
+    @(posedge slow_clk);write_instruction(32'hffe00793);
+    @(posedge slow_clk);write_instruction(32'hfef42623);
+    @(posedge slow_clk);write_instruction(32'hfdc42783);
+    @(posedge slow_clk);write_instruction(32'hfec42703);
+    @(posedge slow_clk);write_instruction(32'h00ef7f33);
+    @(posedge slow_clk);write_instruction(32'h00ff6f33);
+    @(posedge slow_clk);write_instruction(32'h00000013);
+    @(posedge slow_clk);write_instruction(32'h02c12403);
+    @(posedge slow_clk);write_instruction(32'h03010113);
+    @(posedge slow_clk);write_instruction(32'h00008067);
+    @(posedge slow_clk);write_instruction(32'hfe010113);
+    @(posedge slow_clk);write_instruction(32'h00812e23);
+    @(posedge slow_clk);write_instruction(32'h02010413);
+    @(posedge slow_clk);write_instruction(32'h01ff5513);
+    @(posedge slow_clk);write_instruction(32'h00157793);
+    @(posedge slow_clk);write_instruction(32'hfef42623);
+    @(posedge slow_clk);write_instruction(32'hfec42783);
+    @(posedge slow_clk);write_instruction(32'h00078513);
+    @(posedge slow_clk);write_instruction(32'h01c12403);
+    @(posedge slow_clk);write_instruction(32'h02010113);
+    @(posedge slow_clk);write_instruction(32'h00008067);
+    @(posedge slow_clk);write_instruction(32'hffffffff);
+    @(posedge slow_clk);write_instruction(32'hffffffff);
 */
-    #4000
-    input_wires = 2'b10;
-    
-    #4000
-    input_wires = 2'b00;
-    
-    #4000
-    input_wires = 2'b11;
+     input_wires = 1'b1;
+	 #3200
+	 input_wires = 1'b0;
+	 #3000
+	 input_wires = 1'b1;
+	 #3000
+	 input_wires = 1'b0;
+	 #100
+	 input_wires = 1'b1;
+	 #300
+     input_wires = 1'b0;
 
      $display("Test Results:");
      $display("    PASSES: %d", passes);
@@ -232,11 +235,11 @@ end
 .uart_rx_en   (uart_rx_en   ), // Recieve enable
 .uart_rx_break(uart_rx_break), // Did we get a BREAK message?
 .uart_rx_valid(uart_rx_valid), // Valid data recieved and available.
-.uart_rx_data (uart_rx_data ), 
-.input_gpio_pins(input_wires), 
-.output_gpio_pins(output_wires), 
+.uart_rx_data (uart_rx_data ),
+.input_gpio_pins(input_wires),
+.output_gpio_pins(output_wires),
 .write_done(write_done)
-); 
+);
 
 
 
