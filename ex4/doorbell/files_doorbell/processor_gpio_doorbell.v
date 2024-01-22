@@ -7465,8 +7465,8 @@ endmodule
 
     always @(posedge clk)
     begin
-    output_pins = {top_gpio_pins[1],30'b0, input_gpio_pins} ;
-    output_gpio_pins = top_gpio_pins[1];
+    output_pins = {input_gpio_pins, 30'b0, top_gpio_pins[0:0]} ;
+    output_gpio_pins = top_gpio_pins[0:0];
     write_done = writing_inst_done ;
     instructions = write_inst_count[2:0];
 

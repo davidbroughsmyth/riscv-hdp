@@ -208,17 +208,36 @@ initial begin
     @(posedge slow_clk);write_instruction(32'hffffffff);
     @(posedge slow_clk);write_instruction(32'hffffffff);
 */
-     input_wires = 1'b1;
-	 #3200
-	 input_wires = 1'b0;
-	 #3000
+	 #8000
 	 input_wires = 1'b1;
-	 #3000
+	 #8200
 	 input_wires = 1'b0;
-	 #100
+	 #8000
 	 input_wires = 1'b1;
-	 #300
-     input_wires = 1'b0;
+	 #8000
+	 input_wires = 1'b0;
+	 #8000
+	 input_wires = 1'b1;
+	 #8000
+     	 input_wires = 1'b0;
+	 #8000
+     	 input_wires = 1'b1;
+	 #8000
+     	 input_wires = 1'b1;
+	 #800
+     	 input_wires = 1'b0;
+	 #800
+     	 input_wires = 1'b0;
+	 #800
+     	 input_wires = 1'b1;
+	 #800
+     	 input_wires = 1'b0;
+	 #8000
+     	 input_wires = 1'b1;
+	 #200
+     	 input_wires = 1'b0;
+	 #200
+     	 input_wires = 1'b1;
 
      $display("Test Results:");
      $display("    PASSES: %d", passes);
