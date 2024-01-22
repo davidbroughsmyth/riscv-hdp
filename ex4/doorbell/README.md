@@ -111,7 +111,7 @@ add
 #### Testing app via x30 GPIO bits 
 ![image](../../images/doorbell_test.png)
 
-#### Verilog generation 
+#### Pre-config Verilog generation 
 Unmodified ChipCron processor.v and testbench.v doing a verilog run. This tests out the doorbell program loading from the uart.
 ```
 iverilog -o doorbell_v testbench.v  processor.v
@@ -125,3 +125,56 @@ vvp doorbell_v
 vvp doorbell_v -fst
 ```
 ![image](../../images/doorbell_run_fst.png)
+#### GPIO Config
+processor_gpio_doorbell.v gpio input and output changes
+```
+    input wire input_gpio_pins;
+    output reg output_gpio_pins;
+...
+    output_pins = {input_gpio_pins, 30'b0, top_gpio_pins[0:0]} ;
+    output_gpio_pins = top_gpio_pins[0:0];
+```
+testbench_gpio_doorbell.v
+```
+    input_wires = 1'b0;
+    #4000
+...
+    uart_rx_en = 1'b1;
+/*
+    comment out the uart load tests
+*/
+	 #8000
+	 input_wires = 1'b1;
+	 #8200
+	 input_wires = 1'b0;
+	 #8000
+	 input_wires = 1'b1;
+	 #8000
+	 input_wires = 1'b0;
+	 #8000
+	 input_wires = 1'b1;
+	 #8000
+     	 input_wires = 1'b0;
+	 #8000
+     	 input_wires = 1'b1;
+	 #8000
+     	 input_wires = 1'b1;
+	 #800
+     	 input_wires = 1'b0;
+	 #800
+     	 input_wires = 1'b0;
+	 #800
+     	 input_wires = 1'b1;
+	 #800
+     	 input_wires = 1'b0;
+	 #8000
+     	 input_wires = 1'b1;
+	 #200
+     	 input_wires = 1'b0;
+	 #200
+     	 input_wires = 1'b1;
+```
+#### gtkwave simulations
+```
+gtkwave waveform.vcd
+```
