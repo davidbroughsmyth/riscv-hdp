@@ -126,7 +126,7 @@ vvp doorbell_v -fst
 ```
 ![image](../../images/doorbell_run_fst.png)
 #### GPIO Config
-processor_gpio_doorbell.v gpio input and output changes
+processor_gpio_doorbell.v gpio input and output changes where input_gpio_pins is bit 31 of the x30 register and top_gpio_pins[0:0] is bit 0 of the x30 register
 ```
     input wire input_gpio_pins;
     output reg output_gpio_pins;
@@ -134,7 +134,7 @@ processor_gpio_doorbell.v gpio input and output changes
     output_pins = {input_gpio_pins, 30'b0, top_gpio_pins[0:0]} ;
     output_gpio_pins = top_gpio_pins[0:0];
 ```
-testbench_gpio_doorbell.v
+testbench_gpio_doorbell.v configured to disable the uart tests. input_wires simulates the button being pressed
 ```
     input_wires = 1'b0;
     #4000
@@ -174,7 +174,13 @@ testbench_gpio_doorbell.v
 	 #200
      	 input_wires = 1'b1;
 ```
-#### gtkwave simulations
+#### gtkwave simulations showing with long timing delay code enabled
 ```
 gtkwave waveform.vcd
 ```
+#### gtkwave simulations showing with long timing delay code disabled
+```
+gtkwave waveform.vcd
+```
+
+ 
