@@ -211,5 +211,5 @@ Showing when the input goes from high to low the x30 register bit 31 is set to 0
 The lag from when input_wire goes low to high and the buzzer output goes low to high is due to code processng and the 2 loop delay code.
 ![image](../../images/doorbell_OrInstruct-zoomout.png)
 
-Input_wire goes high to low then the low-high high-low glitch, we see the x30 register bit 31 changing from 1 to 0 and then back to 1 and 0. The output stays high due to lag in the code and ignores the glitch.
+Input_wire goes high to low then the low-high high-low glitch, we see the GPIO signals and x30 register bit 31 changing from 1 to 0 and then back to 1 and 0. The output stays high due to lag in the code and ignores the glitch.
 ![image](../../images/doorbell_buttonHtoL.png)
