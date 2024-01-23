@@ -214,9 +214,9 @@ The lag from when input_wire goes low to high and the buzzer output goes low to 
 Input_wire goes high to low then the low-high high-low glitch, we see the GPIO signals and x30 register bit 31 changing from 1 to 0 and then back to 1 and 0. The output stays high due to lag in the code and ignores the glitch.
 ![image](../../images/doorbell_buttonHtoL.png)o
 
--- Improvements
-1. Have the delay limited and enable when a input wire goes high. This would allow the buzzer to be activated quicker when the circuit is under test or simulation.
-2. Improve the buzzer output to remove the brief pulses whilst the button is still pressed. This could be done by having a flag set when the button is pressed and cleared when the button is released. The buzzer output would be set to 1 when the flag is set and cleared when the flag is cleared.
+-- Possible Improvements
+1. Have the delay limited and enable when a external input wire goes high. This would allow the buzzer to be activated quicker when the circuit is under test or simulation.
+1. Improve the buzzer output to remove the brief pulses whilst the button is still pressed. This could be done by having a flag set when the button is pressed and cleared when the button is released. The buzzer output would be set to 1 when the flag is set and cleared when the flag is cleared.
 
 ### Gate Level Simulation
 ```
