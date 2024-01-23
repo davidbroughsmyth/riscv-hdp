@@ -126,7 +126,7 @@ vvp doorbell_v -fst
 ```
 ![image](../../images/doorbell_run_fst.png)
 #### GPIO Config
-*processor_gpio_doorbell.v* gpio input and output changes where input_gpio_pins is bit 31 of the x30 register and top_gpio_pins[0:0] is bit 0 of the x30 register
+*processor_gpio_doorbell.v* gpio input and output verilog changes where input_gpio_pins is bit 31 of the x30 register and top_gpio_pins[0:0] is bit 0 of the x30 register
 ```
     input wire input_gpio_pins;
     output reg output_gpio_pins;
@@ -178,9 +178,17 @@ vvp doorbell_v -fst
 ```
 gtkwave waveform.vcd
 ```
+![image](../../images/doorbell_longdelay.png)
+![image](../../images/doorbell_longdelay_detailsignals.png)
 #### gtkwave simulations with long timing delay code disabled
 ```
 gtkwave waveform.vcd
 ```
+![image](../../images/doorbell_just-inputoutputs.png)
+![image](../../images/doorbell_input-output_cycle.png)
+![image](../../images/doorbell_firstinstructon.png)
+![image](../../images/doorbell_debounce-input.png)
+![image](../../images/doorbell_orinstruct-bellLtoH.png)
+![image](../../images/doorbell_bntHtoL_x30reg.png)
 
  
