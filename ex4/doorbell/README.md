@@ -183,7 +183,7 @@ gtkwave waveform.vcd
 Showing the input_wires simulating the button being pressed but the buzzer not being activated until the very long timing delay code has completed.
 ![image](../../images/doorbell_longdelay.png)
 
-From device reset to the first instruction *fe010113 add sp,sp,-32*, we can see the x30
+From device reset to the first instruction *fe010113 add sp,sp,-32*, the code has execution is shown in detail.
 ![image](../../images/doorbell_longdelay_detailsignals.png)
 #### Simulations with long timing delay code disabled
 The delay code has been limited to 2 for loop cycles for these simulations.
