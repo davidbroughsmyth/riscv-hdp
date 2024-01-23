@@ -182,7 +182,8 @@ gtkwave waveform.vcd
 ```
 Showing the input_wires simulating the button being pressed but the buzzer not being activated until the very long timing delay code has completed.
 ![image](../../images/doorbell_longdelay.png)
-From device reset to the first instruction *fe010113 add sp,sp,-32*, we can see the x30 ???
+
+From device reset to the first instruction *fe010113 add sp,sp,-32*, we can see the x30
 ![image](../../images/doorbell_longdelay_detailsignals.png)
 #### Simulations with long timing delay code disabled
 The delay code has been limited to 2 for loop cycles for these simulations.
@@ -191,17 +192,24 @@ gtkwave waveform.vcd
 ```
 Just showing the input_wires simulating the button being pressed and the buzzer being activated, the output_wire has brief pulses to 0 while the button is pressed. This is due to the code for function setBuzzer() where the x30 register is ANDed with 0xFFFFFFFE to clear the bit 0 then is ANDed with the GPIO_buzz_bit which is 1 to set the bit 0 to 1 again.
 ![image](../../images/doorbell_just-inputoutputs.png)
+
 The whole input and output simulation cycle. Also showing input glitching when the button is pressed but still debounce even though the delay code has been limited to 2 for loop cycles.
 ![image](../../images/doorbell_input-output_cycle.png)
+
 From device reset to the first instruction *fe010113 add sp,sp,-32*.
 ![image](../../images/doorbell_firstinstructon.png)
+
 Showing debounce input
 ![image](../../images/doorbell_debounce-input.png)
+
 The setBuzzer() ORing instruction *00ff6f33 or	t5,t5,a5* setting the buzzer output to 1.
 ![image](../../images/doorbell_orinstruct-bellLtoH.png)
+
 Showing when the input goes from high to low the x30 register bit 31 is set to 0 but bit 0 is still set to 1.
 ![image](../../images/doorbell_bntHtoL_x30reg.png)
+
 The lag from when input_wire goes low to high and the buzzer output goes low to high is due to code processng and the 2 loop delay code.
 ![image](../../images/doorbell_OrInstruct-zoomout.png)
+
 Input_wire goes high to low then the low-high high-low glitch, we see the x30 register bit 31 changing from 1 to 0 and then back to 1 and 0. The output stays high due to lag in the code and ignores the glitch.
 ![image](../../images/doorbell_buttonHtoL.png)
