@@ -108,10 +108,10 @@ jal
 and
 add
 ```
-#### Testing app via x30 GPIO bits 
+#### Testing app via x30 GPIO bits
 ![image](../../images/doorbell_test.png)
 
-#### Pre-config Verilog generation 
+#### Pre-config Verilog generation
 Unmodified ChipCron processor.v and testbench.v doing a verilog run. This tests out the doorbell program loading from the uart.
 ```
 iverilog -o doorbell_v testbench.v  processor.v
@@ -120,7 +120,7 @@ vvp doorbell_v
 ![image](../../images/doorbell_verilog_run1.png)
 ![image](../../images/doorbell_verilog_run2.png)
 
--- running simulator with -fst flag to compress the .vcd file as the native file waveform can get very large. A smaller .vcd helps gtkwave to load faster. 
+-- running simulator with -fst flag to compress the .vcd file as the native file waveform can get very large. A smaller .vcd helps gtkwave to load faster.
 ```
 vvp doorbell_v -fst
 ```
@@ -174,21 +174,30 @@ vvp doorbell_v -fst
 	 #200
      	 input_wires = 1'b1;
 ```
-#### gtkwave simulations with long timing delay code enabled
+### GTKWave simulations
+#### Simulation with long timing delay code enabled
+The delay does 1000000 for loop cycles which is too long to see input/output changes.
 ```
 gtkwave waveform.vcd
 ```
+Showing the input_wires simulating the button being pressed but the buzzer not being activated until the very long timing delay code has completed.
 ![image](../../images/doorbell_longdelay.png)
+From device reset to the first instruction *fe010113 add sp,sp,-32*, we can see the x30 ???
 ![image](../../images/doorbell_longdelay_detailsignals.png)
-#### gtkwave simulations with long timing delay code disabled
+#### Simulations with long timing delay code disabled
+The delay code has been limited to 2 for loop cycles.
 ```
 gtkwave waveform.vcd
 ```
+Just showing the input_wires simulating the button being pressed and the buzzer being activated, the output_wire has brief pulses to 0 while the button is pressed. This is due to the code for function setBuzzer() where the x30 register is ANDed with 0xFFFFFFFE to clear the bit 0. This is to ensure that the x30 register is not set to 1 when the button is not pressed.
 ![image](../../images/doorbell_just-inputoutputs.png)
+The whole input and output cycle. Also showing input glitching when the button is pressed but still debounce even though the delay code has been limited to 2 for loop cycles.
 ![image](../../images/doorbell_input-output_cycle.png)
+From device reset to the first instruction *fe010113 add sp,sp,-32*.
 ![image](../../images/doorbell_firstinstructon.png)
+Showing debounce input
 ![image](../../images/doorbell_debounce-input.png)
+The setBuzzer() OR instruction *00ff6f33 or	t5,t5,a5* setting the buzzer output to 1.
 ![image](../../images/doorbell_orinstruct-bellLtoH.png)
+Showing when the input goes from high to low the x30 register bit 31 is set to 0 but bit 0 is still set to 1.
 ![image](../../images/doorbell_bntHtoL_x30reg.png)
-
- 
