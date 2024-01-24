@@ -212,7 +212,7 @@ The lag from when input_wire goes low to high and the buzzer output goes low to 
 ![image](../../images/doorbell_OrInstruct-zoomout.png)
 
 Input_wire goes high to low then the low-high high-low glitch, we see the GPIO signals and x30 register bit 31 changing from 1 to 0 and then back to 1 and 0. The output stays high due to lag in the code and ignores the glitch.
-![image](../../images/doorbell_buttonHtoL.png)o
+![image](../../images/doorbell_buttonHtoL.png)
 
 -- Possible Improvements
 1. Have the delay limited from reset and only enable the long delay when a external input wire goes high. This would allow the buzzer to be activated quicker when the circuit is under test or simulation.
@@ -228,3 +228,8 @@ yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 yosys> write_verilog synth_processor_nodelay_gpio_doorbell.v
 ```
 
+Showing visual gates for wrapper module
+```
+yosys> show wrapper
+```
+![image](../../images/doorbell_wrapper_gates.png)
