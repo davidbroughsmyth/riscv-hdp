@@ -220,4 +220,11 @@ Input_wire goes high to low then the low-high high-low glitch, we see the GPIO s
 
 ### Gate Level Simulation
 ```
+yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+yosys> read_verilog processor_nodelay_gpio_doorbell.v
+yosys> synth -top wrapper
+yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+yosys> write_verilog synth_processor_nodelay_gpio_doorbell.v
 ```
+
