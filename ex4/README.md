@@ -39,11 +39,11 @@ make install
 Download the latest release from https://github.com/YosysHQ/oss-cad-suite-build/releases/latest
 
 It has many tools including yosys, ABC, nextpnr, icestorm, iverilog, verilator, gtkwave
-'''
+```
 xattr -d com.apple.quarantine oss-cad-suite-darwin-x64-yyymmdd.tgz
 source <extracted_location>/oss-cad-suite/environment
 yosys -V
-'''
+```
 
 #### Openlane MacOS M1/2: https://github.com/The-OpenROAD-Project/OpenLane
 Has many tools including yosys, Magic, klayout and OpenROAD
