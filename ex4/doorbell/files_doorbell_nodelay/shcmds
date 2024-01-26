@@ -1,0 +1,4 @@
+iverilog -o doorbell_v testbench_nodelay_gpio_doorbell.v processor_nodelay_gpio_doorbell.v
+vvp doorbell_v -fst
+gtkwave waveform.vcd
+gtkwave doorbell.gtkw

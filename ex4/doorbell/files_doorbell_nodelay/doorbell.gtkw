@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri Jan 26 00:35:07 2024
+[*]
+[dumpfile] "/Users/davidb/dev/rv/riscv-hdp/ex4/doorbell/files_doorbell_nodelay/waveform.vcd"
+[dumpfile_mtime] "Fri Jan 26 00:27:50 2024"
+[dumpfile_size] 72278
+[savefile] "/Users/davidb/dev/rv/riscv-hdp/ex4/doorbell/files_doorbell_nodelay/doorbell.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 1834 346
+*-13.834283 50680 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.dut.
+[treeopen] tb.dut.top_inst.
+[sst_width] 253
+[signals_width] 265
+[sst_expanded] 1
+[sst_vpaned_height] 158
+@28
+tb.clk
+[color] 2
+tb.input_wires
+@29
+[color] 1
+tb.output_wires
+@22
+tb.dut.top_inst.ID_instruction[31:0]
+tb.dut.top_inst.reg_file.\$signal[31:0]
+@28
+tb.rst
+tb.write_done
+[pattern_trace] 1
+[pattern_trace] 0
