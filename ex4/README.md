@@ -37,7 +37,8 @@ make install
 
 #### OSS CAD Suite MacOS M1/2: https://github.com/YosysHQ/oss-cad-suite-build
 Download the latest release from https://github.com/YosysHQ/oss-cad-suite-build/releases/latest
-Has many tools including yosys, ABC, nextpnr, icestorm, iverilog, verilator, gtkwave
+
+It has many tools including yosys, ABC, nextpnr, icestorm, iverilog, verilator, gtkwave
 '''
 xattr -d com.apple.quarantine oss-cad-suite-darwin-x64-yyymmdd.tgz
 source <extracted_location>/oss-cad-suite/environment
@@ -56,10 +57,13 @@ make test
 ```
 
 Testing klayout with sky130 technology, ensure XQuartz is installed and running, see https://www.xquartz.org or https://github.com/XQuartz/XQuartz
+
+Run the following command in a terminal first:
 ```
 xhost +localhost
 ```
 
+Then run the following command to start docker:
 ```
 # Enter a Docker session:
 make mount
