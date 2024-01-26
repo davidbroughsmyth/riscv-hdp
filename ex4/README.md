@@ -90,4 +90,14 @@ sky130_fd_sc_hd - sky130 FreePDK high density standard cell library
   * 1v80: This specifies the nominal supply voltage (1.8V) and the typical threshold voltage (0.8V) of the transistors in the cells.
   * 256: This is likely the number of cells included in the library. More cells provide more flexibility for designers, but also increase the file size and complexity.
 
-Overall, sky130_fd_sc_hd__tt_025C_1v80_256.lib is a crucial file for anyone designing circuits using the SkyWater PDK130 process. It provides the basic building blocks and characteristics needed to simulate, layout, and fabricate your design.
+Overall, *sky130_fd_sc_hd__tt_025C_1v80_256.lib* is a crucial file for anyone designing circuits using the SkyWater PDK130 process. It provides the basic building blocks and characteristics needed to simulate, layout, and fabricate your design.
+
+*sky130_sram_1kbyte_1rw1r_32x256_8.v* is a Verilog module that describes a 1 kilobyte Static Random-Access Memory (SRAM) for the SkyWater PDK130 process. Here's a breakdown of its components:
+
+  * sky130: This refers to the SkyWater PDK130 technology, as mentioned previously.
+  * sram: This indicates the module defines a memory block.
+  * 1kbyte: This specifies the total memory capacity of the block, which is 1 kilobyte, or 1024 bytes.
+  * 1rw1r: This describes the access mode. It's a pseudo-dual port SRAM, meaning you can only perform one write operation and one read operation simultaneously. It's not a true dual-port where both actions can happen independently.
+  * 32x256: This defines the memory organization. It has a word size of 32 bits (4 bytes) and a depth of 256 words, resulting in the 1 kilobyte capacity.
+  * 8: This likely refers to the data bus width. You can read and write 8 bits (one byte) at a time from the 32-bit words.
+  * .v: This is the file extension for Verilog source code.
