@@ -20,6 +20,7 @@ python3 cpusage.py -h
 cpusage.py -i <inputfile> -o <outputfile>
 flags: -ci or -c -i to count instructions, -h this help
 ```
+### Tooling for Verilog generation, simulation and synthesis, FPGA programming, and ASIC design
 
 #### Yosys (VM install): https://github.com/YosysHQ/yosys
 Installing Yosys on the vsdworkshop VM. Install the latest by entering the following commands in the terminal:
@@ -69,10 +70,23 @@ Then run the following command to start docker:
 make mount
 
 # Open the spm.gds using KLayout with sky130 PDK
-klayout -e -nn $PDK_ROOT/sky130A/libs.tech/klayout/tech/sky130A.lyt \
+klayout -e -nn $PDK_ROOT/sky130A/libs.tec h/klayout/tech/sky130A.lyt \
    -l $PDK_ROOT/sky130A/libs.tech/klayout/tech/sky130A.lyp \
    ./designs/spm/runs/openlane_test/results/final/gds/spm.gds
 
 # Leave the Docker
 exit
 ```
+
+### SkyWater Libraries
+sky130_fd_sc_hd - sky130 FreePDK high density standard cell library
+
+*sky130_fd_sc_hd__tt_025C_1v80_256.lib*, is a standard cell library for the SkyWater PDK130 process. It's used in integrated circuit (IC) design to describe the basic building blocks of circuits, like logic gates, memories, and analog circuits. Here's a breakdown of its components:
+
+  *sky130: This refers to the SkyWater PDK130, a 130-nanometer CMOS process technology offered by SkyWater Technology. It's popular for its low cost and ease of use, making it ideal for a wide range of applications, including research, education, and commercial products.
+  *fd_sc: This part stands for "foundation standard cells". These are the basic logic gates and other circuit elements that can be combined to create more complex functions.
+  *hd: This indicates the "high-drive" version of the standard cells. These cells have lower resistance compared to regular cells, allowing them to drive larger loads or operate at higher frequencies.
+  *tt_025C: This part likely refers to the specific transistor size and channel width used in the cells. Different sizes offer different trade-offs between performance, power consumption, and area.
+  *1v80: This specifies the nominal supply voltage (1.8V) and the typical threshold voltage (0.8V) of the transistors in the cells.
+  *256: This is likely the number of cells included in the library. More cells provide more flexibility for designers, but also increase the file size and complexity.
+Overall, sky130_fd_sc_hd__tt_025C_1v80_256.lib is a crucial file for anyone designing circuits using the SkyWater PDK130 process. It provides the basic building blocks and characteristics needed to simulate, layout, and fabricate your design.
