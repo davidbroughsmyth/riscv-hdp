@@ -86,8 +86,8 @@ sky130_fd_sc_hd - sky130 FreePDK high density standard cell library
   * sky130: This refers to the SkyWater PDK130, a 130-nanometer CMOS process technology offered by SkyWater Technology. It's popular for its low cost and ease of use, making it ideal for a wide range of applications, including research, education, and commercial products.
   * fd_sc: This part stands for "SkyWater foundary standard cells". These are the basic logic gates and other circuit elements that can be combined to create more complex functions.
   * hd: This indicates the "high-density" version of the standard cells.
-  * tt_025C: This part likely refers to the specific transistor size and channel width used in the cells. Different sizes offer different trade-offs between performance, power consumption, and area.
-  * 1v80: This specifies the nominal supply voltage (1.8V) and the typical threshold voltage (0.8V) of the transistors in the cells.
+  * tt_025C: This part refers to the timming model and temperature. The "tt" stands for "typical typical", which means the model is based on typical values. The "025C" indicates the temperature is 25 degrees Celsius.
+  * 1v80: This specifies the nominal supply voltage (1.8V) of the transistors in the cells.
   * 256: Includes cell sky130_sram_1kbyte_1rw1r_32x256_8
 
 
