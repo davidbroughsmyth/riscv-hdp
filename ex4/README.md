@@ -88,7 +88,8 @@ sky130_fd_sc_hd - sky130 FreePDK high density standard cell library
   * hd: This indicates the "high-drive" version of the standard cells. These cells have lower resistance compared to regular cells, allowing them to drive larger loads or operate at higher frequencies.
   * tt_025C: This part likely refers to the specific transistor size and channel width used in the cells. Different sizes offer different trade-offs between performance, power consumption, and area.
   * 1v80: This specifies the nominal supply voltage (1.8V) and the typical threshold voltage (0.8V) of the transistors in the cells.
-  * 256: This is likely the number of cells included in the library. More cells provide more flexibility for designers, but also increase the file size and complexity.
+  * 256: Includes cell sky130_sram_1kbyte_1rw1r_32x256_8
+
 
 Overall, *sky130_fd_sc_hd__tt_025C_1v80_256.lib* is a crucial file for anyone designing circuits using the SkyWater PDK130 process. It provides the basic building blocks and characteristics needed to simulate, layout, and fabricate your design.
 
