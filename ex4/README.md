@@ -84,8 +84,8 @@ sky130_fd_sc_hd - sky130 FreePDK high density standard cell library
 *sky130_fd_sc_hd__tt_025C_1v80_256.lib*, is a standard cell library for the SkyWater PDK130 process. It's used in integrated circuit (IC) design to describe the basic building blocks of circuits, like logic gates, memories, and analog circuits. Here's a breakdown of its components:
 
   * sky130: This refers to the SkyWater PDK130, a 130-nanometer CMOS process technology offered by SkyWater Technology. It's popular for its low cost and ease of use, making it ideal for a wide range of applications, including research, education, and commercial products.
-  * fd_sc: This part stands for "foundation standard cells". These are the basic logic gates and other circuit elements that can be combined to create more complex functions.
-  * hd: This indicates the "high-drive" version of the standard cells. These cells have lower resistance compared to regular cells, allowing them to drive larger loads or operate at higher frequencies.
+  * fd_sc: This part stands for "SkyWater foundary standard cells". These are the basic logic gates and other circuit elements that can be combined to create more complex functions.
+  * hd: This indicates the "high-density" version of the standard cells.
   * tt_025C: This part likely refers to the specific transistor size and channel width used in the cells. Different sizes offer different trade-offs between performance, power consumption, and area.
   * 1v80: This specifies the nominal supply voltage (1.8V) and the typical threshold voltage (0.8V) of the transistors in the cells.
   * 256: Includes cell sky130_sram_1kbyte_1rw1r_32x256_8
