@@ -219,16 +219,35 @@ Input_wire goes high to low then the low-high high-low glitch, we see the GPIO s
 1. Improve the buzzer output to remove the brief HLH pulses whilst the button is still pressed. This could be done by having a flag set when the button is pressed and cleared when the button is released. The buzzer output would be set to 1 when the flag is set and cleared when the flag is cleared.
 
 ### Gate Level Simulation
+config *config_cpu_doorbell.json* with "ASIC":false
 ```
-yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
 yosys> read_verilog processor_nodelay_gpio_doorbell.v
 yosys> synth -top wrapper
-yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 yosys> write_verilog synth_processor_nodelay_gpio_doorbell.v
 ```
 Showing visual gates for wrapper module
 ```
-yosys> show wrapper
+yosys> show -colors 2 -width -signed wrapper
 ```
 ![image](../../images/doorbell_wrapper_gates.png)
+
+### ASIC Gate Level Simulation
+config *config_cpu_doorbell_asic.json* with "ASIC":true
+```
+yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
+yosys> read_verilog processor_asic.v
+yosys> synth -top wrapper
+yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+yosys> write_verilog synth_asic_processor.v
+```
+![image](../../images/doorbell_sky130_cells.png)
+
+Showing visual gates for wrapper module
+```
+yosys> show -colors 2 -width -signed wrapper
+```
+![image](../../images/doorbell_sky130_gates.png)
