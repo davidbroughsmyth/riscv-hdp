@@ -237,6 +237,7 @@ yosys> show -colors 2 -width -signed wrapper
 ### ASIC Gate Level Simulation
 
 config:
+
 *config_cpu_doorbell_asic.json* with "ASIC":true
 *processor_asic.v* has writing_inst_done=0;
 *processor_gls.v* has writing_inst_done=1;
