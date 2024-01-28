@@ -235,6 +235,7 @@ yosys> show -colors 2 -width -signed wrapper
 ![image](../../images/doorbell_wrapper_gates.png)
 
 ### ASIC Gate Level Simulation
+
 config:
 *config_cpu_doorbell_asic.json* with "ASIC":true
 *processor_asic.v* has writing_inst_done=0;
