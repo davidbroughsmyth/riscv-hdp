@@ -239,7 +239,9 @@ yosys> show -colors 2 -width -signed wrapper
 config:
 
 *config_cpu_doorbell_asic.json* with "ASIC":true
+
 *processor_asic.v* has writing_inst_done=0;
+
 *processor_gls.v* has writing_inst_done=1;
 ```
 yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
