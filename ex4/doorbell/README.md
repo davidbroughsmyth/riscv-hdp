@@ -252,7 +252,21 @@ yosys> show -colors 2 -width -signed wrapper
 ```
 ![image](../../images/doorbell_sky130_gates.png)
 
-Building the verilog for ASIC gate level simulation with external sram
+
+Modify the *synth_asic_processor.v* to point to the external sram verilog modules in file *doorbell_nodelay_sky130_sram_1kbyte_1rw1r_32x256_8.v* by changing the module names. The new file will the changes is *synth_asic_processor_sram.v*.
+```
+diff> synth_asic_processor.v synth_asic_processor_sram.v
+97567c97567
+<   sky130_sram_1kbyte_1rw1r_32x256_8 data_mem (
+---
+>   sky130_sram_1kbyte_1rw1r_32x256_8_data data_mem (
+97582c97582
+<   sky130_sram_1kbyte_1rw1r_32x256_8 inst_mem (
+---
+>   sky130_sram_1kbyte_1rw1r_32x256_8_inst inst_mem (
+```
+
+Building the verilog for ASIC gate level simulation with external sram.
 ```
 iverilog -o synth_asic_doorbell_v testbench_asic.v synth_asic_processor_sram.v doorbell_nodelay_sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v
 vvp synth_asic_doorbell_v -fst
