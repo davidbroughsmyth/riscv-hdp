@@ -1,0 +1,7 @@
+iverilog -o doorbell_v testbench_nodelay_gpio_doorbell.v processor_nodelay_gpio_doorbell.v
+vvp doorbell_v -fst
+gtkwave waveform.vcd
+gtkwave doorbell.gtkw
+iverilog -o synth_doorbell_v testbench_nodelay_gpio_doorbell.v synth_processor_nodelay_gpio_doorbell.v sky130_fd_sc_hd.v primitives.v
+vvp synth_doorbell_v -fst
+iverilog -o synth_doorbell_v testbench_nodelay_gpio_doorbell.v synth_processor_nodelay_gpio_doorbell.v sky130_sram_1kbyte_1rw1r_32x256_8.v sky130_fd_sc_hd.v primitives.v

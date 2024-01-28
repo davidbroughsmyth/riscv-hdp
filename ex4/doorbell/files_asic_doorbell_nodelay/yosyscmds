@@ -1,0 +1,8 @@
+read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+read_verilog processor_nodelay_gpio_doorbell.v
+synth -top wrapper
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib 
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+write_verilog synth_processor_nodelay_gpio_doorbell.v
+show wrapper
+
