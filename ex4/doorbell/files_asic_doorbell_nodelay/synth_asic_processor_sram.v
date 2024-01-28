@@ -97564,7 +97564,7 @@ module wrapper(clk, resetn, uart_rxd, uart_rx_en, uart_rx_break, uart_rx_valid, 
   );
   (* module_not_derived = 32'd1 *)
   (* src = "processor_gls.v:7334.39-7348.6" *)
-  sky130_sram_1kbyte_1rw1r_32x256_8 data_mem (
+  sky130_sram_1kbyte_1rw1r_32x256_8_data data_mem (
     .addr0(data_mem_addr),
     .addr1(write_inst_count),
     .clk0(clk),
@@ -97579,7 +97579,7 @@ module wrapper(clk, resetn, uart_rxd, uart_rx_en, uart_rx_break, uart_rx_valid, 
   );
   (* module_not_derived = 32'd1 *)
   (* src = "processor_gls.v:7316.39-7330.6" *)
-  sky130_sram_1kbyte_1rw1r_32x256_8 inst_mem (
+  sky130_sram_1kbyte_1rw1r_32x256_8_inst inst_mem (
     .addr0(write_inst_count),
     .addr1(write_inst_count),
     .clk0(clk),

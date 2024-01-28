@@ -6736,8 +6736,6 @@ module top(csb_alu, csb_mem, web, wmask, alu_result, gpio_pins, output_pins, ins
 endmodule
 
 
-
-/*
     module sky130_sram_2kbyte_1rw1r_32x256_8_inst(
     `ifdef USE_POWER_PINS
         vccd1,
@@ -6847,8 +6845,7 @@ endmodule
     end
 
     endmodule
-*/
-/*
+
     module sky130_sram_2kbyte_1rw1r_32x256_8_data(
     `ifdef USE_POWER_PINS
         vccd1,
@@ -6958,7 +6955,7 @@ endmodule
     end
 
     endmodule
-*/
+
     module uart_rx(
     input  wire       clk          , // Top level system clock input.
     input  wire       resetn       , // Asynchronous active low reset.
@@ -7228,7 +7225,7 @@ endmodule
 
         if(rst==1)
         begin
-            writing_inst_done=0;
+            writing_inst_done=1;
             write_inst_count=0;
             instruction=0;
             inst_byte_count=0;
