@@ -4,4 +4,4 @@ synth -top wrapper
 dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 write_verilog synth_asic_processor.v
-show wrapper
+show -colors 2 -width -signed wrapper
