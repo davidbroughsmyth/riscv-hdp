@@ -235,10 +235,13 @@ yosys> show -colors 2 -width -signed wrapper
 ![image](../../images/doorbell_wrapper_gates.png)
 
 ### ASIC Gate Level Simulation
-config *config_cpu_doorbell_asic.json* with "ASIC":true
+config:
+*config_cpu_doorbell_asic.json* with "ASIC":true
+*processor_asic.v* has writing_inst_done=0;
+*processor_gls.v* has writing_inst_done=1;
 ```
 yosys> read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
-yosys> read_verilog processor_asic.v
+yosys> read_verilog processor_gls.v
 yosys> synth -top wrapper
 yosys> dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
 yosys> abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
