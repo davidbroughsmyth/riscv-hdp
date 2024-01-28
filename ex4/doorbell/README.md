@@ -253,7 +253,7 @@ yosys> show -colors 2 -width -signed wrapper
 ![image](../../images/doorbell_sky130_gates.png)
 
 
-Modify the *synth_asic_processor.v* to point to the external sram verilog modules in file *doorbell_nodelay_sky130_sram_1kbyte_1rw1r_32x256_8.v* by changing the sram module names. The new file will the changes is *synth_asic_processor_sram.v*.
+Modify the *synth_asic_processor.v* to point to the external sram verilog modules in file *doorbell_nodelay_sky130_sram_1kbyte_1rw1r_32x256_8.v* by changing the sram module names. The new file with the changes is called *synth_asic_processor_sram.v*.
 ```
 diff> synth_asic_processor.v synth_asic_processor_sram.v
 97567c97567
