@@ -282,3 +282,41 @@ gtkwave waveform.vcd
 
 After synthesising the verilog for ASIC gate level simulation with external sram, the doorbell app is working as expected as shown in the waveform.
 ![image](../../images/doorbell_asic_gls_sram.png)
+
+### Physical design using Openlane
+The physical design of the doorbell app is done using Openlane. The Openlane flow is shown below.
+![image](../../images/openlane_flow.png)
+
+The Openlane flow is run using the following commands.
+```
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design doorbell -tag doorbell
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+gen_pdn
+run_routing
+run_magic
+run_magic_spice_export
+run_magic_drc
+run_magic_antenna_check
+run_lvs
+run_magic_gds_export
+```
+
+The floorplan of the doorbell app is shown below.
+![image](../../images/doorbell_floorplan.png)
+
+The placement of the doorbell app is shown below.
+![image](../../images/doorbell_placement.png)
+
+The routing of the doorbell app is shown below.
+![image](../../images/doorbell_routing.png)
+
+The final layout of the doorbell app is shown below.
+![image](../../images/doorbell_layout.png)
+
+The final layout of the doorbell app with the sky130 standard cells is shown below.
+![image](../../images/doorbell_layout_cells.png)
